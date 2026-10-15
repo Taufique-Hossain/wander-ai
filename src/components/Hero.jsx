@@ -127,7 +127,7 @@ export default function Hero({ onSearch, onSelectPopular, selectedDays = 3, onDa
   return (
     <div className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-16 border-b border-slate-200 dark:border-slate-900 bg-gradient-to-b from-emerald-50/50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900/40 dark:to-slate-950 transition-colors duration-300">
       {/* Decorative gradient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] sm:w-[700px] h-[200px] sm:h-[300px] bg-emerald-500/10 blur-[80px] sm:blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] sm:w-[700px] h-[200px] sm:h-[300px] bg-emerald-500/10 blur-[80px] sm:blur-[120px] pointer-events-none rounded-full animate-ambient-glow" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
         {/* Pill Badge */}

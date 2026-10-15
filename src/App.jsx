@@ -18,6 +18,23 @@ export default function App() {
   const [isLoadingGuide, setIsLoadingGuide] = useState(false);
   const [isGuideModalOpen, setIsGuideModalOpen] = useState(false);
 
+  // Landing & Refresh Splash Screen state (lasts ~750ms for a slick, instant entrance feel)
+  const [isInitialLoading, setIsInitialLoading] = useState(true);
+  const [splashFade, setSplashFade] = useState(false);
+
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => {
+      setSplashFade(true);
+    }, 600);
+    const removeTimer = setTimeout(() => {
+      setIsInitialLoading(false);
+    }, 950);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
+
   // Dark / Light Theme state (persisted in localStorage, defaults to dark)
   const [darkMode, setDarkMode] = useState(() => {
     try {
@@ -123,6 +140,47 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans transition-colors duration-200">
+      {/* Landing & Refresh Splash Screen */}
+      {isInitialLoading && (
+        <div 
+          className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950/95 backdrop-blur-xl transition-all duration-350 ease-out ${
+            splashFade ? 'opacity-0 scale-102 pointer-events-none' : 'opacity-100 scale-100'
+          }`}
+          aria-hidden="true"
+        >
+          {/* Ambient center glow */}
+          <div className="absolute w-80 h-80 bg-emerald-500/15 blur-[100px] rounded-full pointer-events-none animate-pulse" />
+
+          <div className="relative flex flex-col items-center select-none">
+            {/* Spinning Brand Compass */}
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-cyan-400 p-0.5 shadow-2xl shadow-emerald-500/30 mb-4 animate-pop-in">
+              <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+                <Compass className="w-8 h-8 text-emerald-400 animate-spin-once" />
+              </div>
+            </div>
+
+            {/* Brand Title with PRO badge */}
+            <div className="flex items-center gap-2 mb-2 animate-fade-in">
+              <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white font-mono">
+                Wander<span className="text-emerald-400">AI</span>
+              </h1>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">
+                PRO
+              </span>
+            </div>
+
+            <p className="text-xs text-slate-400 font-medium mb-5 tracking-wide">
+              Loading Curated Travel Guides...
+            </p>
+
+            {/* Minimal Progress Bar */}
+            <div className="w-44 h-1 bg-slate-800/80 rounded-full overflow-hidden p-0">
+              <div className="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 rounded-full animate-splash-progress" />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Navbar */}
       <Navbar
         wishlistCount={wishlist.length}
@@ -185,9 +243,10 @@ export default function App() {
 
         {/* Destination Cards Grid: 1 col on mobile, 2 on tablet, 3 on laptop, 4 on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {filteredDestinations.map((dest) => (
+          {filteredDestinations.map((dest, idx) => (
             <AttractionCard
               key={dest.id}
+              index={idx}
               destination={dest}
               currency={currency}
               isWishlisted={wishlist.some((item) => (item.id || item.name) === dest.id)}

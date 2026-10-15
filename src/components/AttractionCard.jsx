@@ -7,12 +7,16 @@ export default function AttractionCard({
   onGenerateGuide, 
   isWishlisted, 
   onToggleWishlist,
-  currency 
+  currency,
+  index = 0
 }) {
   const budgetFormatted = formatCurrency(destination.dailyBudget, currency);
 
   return (
-    <div className="group relative bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 dark:hover:border-emerald-500/40 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-emerald-950/30 transition-all duration-300 hover:-translate-y-1.5 flex flex-col">
+    <div 
+      className="group relative bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 dark:hover:border-emerald-500/40 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-emerald-950/30 transition-all duration-300 hover:-translate-y-1.5 flex flex-col animate-card-cascade"
+      style={{ animationDelay: `${Math.min(index * 45, 540)}ms` }}
+    >
       {/* Image Container */}
       <div className="relative h-52 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
         <img
