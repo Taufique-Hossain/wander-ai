@@ -29,17 +29,17 @@ export default function ApiKeyModal({ isOpen, onClose, apiKey, onSaveApiKey }) {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm animate-in fade-in cursor-pointer"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-sm animate-in fade-in cursor-pointer"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl cursor-default"
+        className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-2xl cursor-default"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-          <div className="flex items-center gap-2 text-white font-bold text-base">
-            <Key className="w-4 h-4 text-emerald-400" />
-            <span>Google Gemini API Configuration</span>
+        <div className="flex items-center justify-between pb-3.5 sm:pb-4 border-b border-slate-800">
+          <div className="flex items-center gap-2 text-white font-bold text-sm sm:text-base">
+            <Key className="w-4 h-4 text-emerald-400 shrink-0" />
+            <span>Google Gemini API Config</span>
           </div>
           <button 
             type="button"
@@ -47,14 +47,14 @@ export default function ApiKeyModal({ isOpen, onClose, apiKey, onSaveApiKey }) {
               e.stopPropagation();
               onClose();
             }} 
-            className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition cursor-pointer border border-slate-700/60"
+            className="p-1.5 sm:p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition cursor-pointer border border-slate-700/60"
             title="Close (Esc)"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
 
-        <form onSubmit={handleSave} className="mt-5 space-y-4">
+        <form onSubmit={handleSave} className="mt-4 sm:mt-5 space-y-4">
           <div>
             <label className="block text-xs font-semibold text-slate-300 mb-1.5">
               Gemini API Key (Optional)
@@ -73,15 +73,15 @@ export default function ApiKeyModal({ isOpen, onClose, apiKey, onSaveApiKey }) {
 
           <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300 flex items-start gap-2">
             <ShieldCheck className="w-4 h-4 shrink-0 mt-0.5" />
-            <span>Keys are stored strictly in your browser session and are never transmitted to third parties.</span>
+            <span className="text-[11px] sm:text-xs">Keys are stored strictly in your browser session and are never transmitted to third parties.</span>
           </div>
 
-          <div className="pt-2 flex items-center justify-between">
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
             <a
               href="https://aistudio.google.com/app/apikey"
               target="_blank"
               rel="noreferrer"
-              className="text-[11px] text-emerald-400 hover:underline flex items-center gap-1 font-medium"
+              className="text-[11px] text-emerald-400 hover:underline flex items-center justify-center sm:justify-start gap-1 font-medium"
             >
               <span>Get Free Key at Google AI Studio</span>
               <ExternalLink className="w-3 h-3" />
@@ -91,13 +91,13 @@ export default function ApiKeyModal({ isOpen, onClose, apiKey, onSaveApiKey }) {
               <button
                 type="button"
                 onClick={onClose}
-                className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-medium transition cursor-pointer"
+                className="flex-1 sm:flex-none px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-medium transition cursor-pointer text-center"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-md transition cursor-pointer"
+                className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-md transition cursor-pointer text-center"
               >
                 {saved ? "Saved!" : "Save Key"}
               </button>
