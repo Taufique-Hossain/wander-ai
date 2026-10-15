@@ -75,12 +75,16 @@ export default function App() {
     setWishlist([]);
   };
 
-  // Generate AI Guide function
-  const handleTriggerGuide = async (destinationQuery) => {
+  // Selected Trip Duration (1, 2, 3, 5, 7 days - default 3)
+  const [tripDays, setTripDays] = useState(3);
+
+  // Generate AI Guide function with multi-day support
+  const handleTriggerGuide = async (destinationQuery, days = tripDays) => {
     setIsGuideModalOpen(true);
     setIsLoadingGuide(true);
     try {
-      const guideData = await generateAITravelGuide(destinationQuery, apiKey);
+      const targetDays = days || tripDays;
+      const guideData = await generateAITravelGuide(destinationQuery, targetDays, apiKey);
       setActiveGuide(guideData);
     } catch (err) {
       console.error("Failed to generate AI guide:", err);
@@ -94,6 +98,7 @@ export default function App() {
     setActiveGuide(null);
     setIsLoadingGuide(false);
   };
+
 
 
   // Filter destinations
@@ -117,8 +122,16 @@ export default function App() {
 
       {/* Hero Section */}
       <Hero
-        onSearch={handleTriggerGuide}
-        onSelectPopular={handleTriggerGuide}
+        onSearch={(query, days) => {
+          setTripDays(days);
+          handleTriggerGuide(query, days);
+        }}
+        onSelectPopular={(name, days) => {
+          setTripDays(days);
+          handleTriggerGuide(name, days);
+        }}
+        selectedDays={tripDays}
+        onDaysChange={setTripDays}
       />
 
       {/* Main Showcase Section */}
@@ -238,6 +251,12 @@ export default function App() {
         currency={currency}
         onSaveToWishlist={handleToggleWishlist}
         isSaved={wishlist.some((item) => (item.id || item.destination) === (activeGuide?.id || activeGuide?.destination))}
+        onChangeDays={(newDays) => {
+          setTripDays(newDays);
+          if (activeGuide?.destination) {
+            handleTriggerGuide(activeGuide.destination, newDays);
+          }
+        }}
       />
 
       <WishlistDrawer
