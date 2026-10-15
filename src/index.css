@@ -3,10 +3,60 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  body {
-    @apply antialiased font-sans min-h-screen selection:bg-emerald-500 selection:text-white transition-colors duration-200;
-    overflow-x: hidden;
+  /* Smooth, silky color transition when switching dark/light theme */
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+  
+  body {
+    @apply antialiased font-sans min-h-screen selection:bg-emerald-500 selection:text-white;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Subtle, pleasant UI animations */
+@keyframes subtleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-fade-in {
+  animation: subtleFadeIn 0.3s ease-out forwards;
+}
+
+.animate-pop-in {
+  animation: popIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4s ease-in-out infinite;
 }
 
 /* Custom modern scrollbar for desktop */
@@ -18,11 +68,11 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #64748b;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #94a3b8;
 }
 
 /* Utility to hide scrollbar for clean touch swipe */

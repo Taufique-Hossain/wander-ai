@@ -165,13 +165,13 @@ export default function App() {
           </div>
 
           {/* Category Filter Pills: scrollable on small screens */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl self-start md:self-auto text-xs overflow-x-auto max-w-full">
+          <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl self-start md:self-auto text-xs overflow-x-auto max-w-full transition-colors duration-300">
             {categories.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer shrink-0 ${
+                className={`px-3 py-1.5 rounded-lg font-medium transition-all duration-200 active:scale-95 cursor-pointer shrink-0 ${
                   selectedCategory === cat
                     ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -198,7 +198,7 @@ export default function App() {
         </div>
 
         {/* Architecture & Feature Highlights */}
-        <div className="mt-12 sm:mt-20 p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-slate-50 to-emerald-50/40 dark:from-slate-900 dark:via-slate-900/60 dark:to-slate-950 border border-slate-200 dark:border-slate-800 relative overflow-hidden shadow-sm dark:shadow-none">
+        <div className="mt-12 sm:mt-20 p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-slate-50 to-emerald-50/40 dark:from-slate-900 dark:via-slate-900/60 dark:to-slate-950 border border-slate-200 dark:border-slate-800 relative overflow-hidden shadow-sm dark:shadow-none transition-all duration-300 hover:border-slate-300 dark:hover:border-slate-700">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 blur-[100px] pointer-events-none rounded-full" />
 
           <div className="max-w-3xl">
@@ -212,7 +212,7 @@ export default function App() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs">
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md dark:hover:shadow-lg dark:hover:shadow-emerald-950/20">
                 <p className="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                   <span>Curated Travel Engine</span>
@@ -220,7 +220,7 @@ export default function App() {
                 <p className="text-slate-600 dark:text-slate-400 text-[11px]">Structured travel synthesis covering 40+ destinations with genuine entry fees and schedules.</p>
               </div>
 
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md dark:hover:shadow-lg dark:hover:shadow-emerald-950/20">
                 <p className="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                   <span>Zero-Break Caching</span>
