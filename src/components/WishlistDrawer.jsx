@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Trash2, MapPin, Sparkles, ExternalLink, ArrowRight } from 'lucide-react';
 
 export default function WishlistDrawer({ 
@@ -9,12 +9,28 @@ export default function WishlistDrawer({
   onClearAll,
   onViewGuide 
 }) {
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-slate-950/80 backdrop-blur-sm animate-in fade-in">
+    <div 
+      className="fixed inset-0 z-50 overflow-hidden bg-slate-950/80 backdrop-blur-sm animate-in fade-in cursor-pointer"
+      onClick={onClose}
+    >
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col">
+        <div 
+          className="w-screen max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col cursor-default"
+          onClick={(e) => e.stopPropagation()}
+        >
           {/* Header */}
           <div className="p-6 border-b border-slate-800 flex items-center justify-between">
             <div>
@@ -22,8 +38,14 @@ export default function WishlistDrawer({
               <p className="text-xs text-slate-400 mt-0.5">{wishlist.length} destinations saved for your next journey</p>
             </div>
             <button
-              onClick={onClose}
-              className="p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white transition"
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onClose();
+              }}
+              aria-label="Close wishlist"
+              className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition cursor-pointer border border-slate-700/60"
+              title="Close (Esc)"
             >
               <X className="w-5 h-5" />
             </button>
@@ -59,15 +81,17 @@ export default function WishlistDrawer({
 
                   <div className="flex items-center gap-1.5">
                     <button
+                      type="button"
                       onClick={() => onViewGuide(item.name || item.destination)}
-                      className="p-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-slate-950 transition"
+                      className="p-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-slate-950 transition cursor-pointer"
                       title="View AI Guide"
                     >
                       <Sparkles className="w-4 h-4" />
                     </button>
                     <button
+                      type="button"
                       onClick={() => onRemoveItem(item.id || item.destination)}
-                      className="p-2 rounded-lg bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 transition"
+                      className="p-2 rounded-lg bg-slate-800 hover:bg-rose-500/20 text-slate-400 hover:text-rose-400 transition cursor-pointer"
                       title="Remove"
                     >
                       <Trash2 className="w-4 h-4" />
@@ -82,17 +106,19 @@ export default function WishlistDrawer({
           {wishlist.length > 0 && (
             <div className="p-6 border-t border-slate-800 bg-slate-950/40 flex items-center justify-between">
               <button
+                type="button"
                 onClick={onClearAll}
-                className="text-xs text-slate-400 hover:text-rose-400 transition flex items-center gap-1.5"
+                className="text-xs text-slate-400 hover:text-rose-400 transition flex items-center gap-1.5 cursor-pointer"
               >
                 <Trash2 className="w-3.5 h-3.5" />
                 <span>Clear Wishlist</span>
               </button>
               <button
+                type="button"
                 onClick={onClose}
-                className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-md transition"
+                className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-md transition cursor-pointer"
               >
-                Continue Exploring
+                Close
               </button>
             </div>
           )}

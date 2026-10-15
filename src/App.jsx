@@ -89,6 +89,13 @@ export default function App() {
     }
   };
 
+  const handleCloseGuideModal = () => {
+    setIsGuideModalOpen(false);
+    setActiveGuide(null);
+    setIsLoadingGuide(false);
+  };
+
+
   // Filter destinations
   const categories = ['All', 'Historical', 'Nature', 'Urban'];
   const filteredDestinations = destinations.filter((dest) => {
@@ -223,9 +230,10 @@ export default function App() {
 
       {/* Modals & Drawers */}
       <AIGuideModal
+        isOpen={isGuideModalOpen}
         guide={activeGuide}
         isLoading={isLoadingGuide}
-        onClose={() => setIsGuideModalOpen(false)}
+        onClose={handleCloseGuideModal}
         currency={currency}
         onSaveToWishlist={handleToggleWishlist}
         isSaved={wishlist.some((item) => (item.id || item.destination) === (activeGuide?.id || activeGuide?.destination))}

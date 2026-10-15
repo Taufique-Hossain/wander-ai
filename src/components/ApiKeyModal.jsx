@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Key, Check, ExternalLink, ShieldCheck } from 'lucide-react';
 
 export default function ApiKeyModal({ isOpen, onClose, apiKey, onSaveApiKey }) {
   const [inputVal, setInputVal] = useState(apiKey || '');
   const [saved, setSaved] = useState(false);
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -18,14 +28,28 @@ export default function ApiKeyModal({ isOpen, onClose, apiKey, onSaveApiKey }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in">
-      <div className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm animate-in fade-in cursor-pointer"
+      onClick={onClose}
+    >
+      <div 
+        className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl cursor-default"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="flex items-center justify-between pb-4 border-b border-slate-800">
           <div className="flex items-center gap-2 text-white font-bold text-base">
             <Key className="w-4 h-4 text-emerald-400" />
             <span>Google Gemini API Configuration</span>
           </div>
-          <button onClick={onClose} className="text-slate-400 hover:text-white transition">
+          <button 
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }} 
+            className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition cursor-pointer border border-slate-700/60"
+            title="Close (Esc)"
+          >
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -63,12 +87,21 @@ export default function ApiKeyModal({ isOpen, onClose, apiKey, onSaveApiKey }) {
               <ExternalLink className="w-3 h-3" />
             </a>
 
-            <button
-              type="submit"
-              className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-md transition"
-            >
-              {saved ? "Saved!" : "Save Key"}
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-medium transition cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs shadow-md transition cursor-pointer"
+              >
+                {saved ? "Saved!" : "Save Key"}
+              </button>
+            </div>
           </div>
         </form>
       </div>
