@@ -175,9 +175,8 @@ const REGIONAL_THEMES = [
   }
 ];
 
-export async function generateAITravelGuide(destinationQuery, days = 3, apiKey = "") {
+export async function generateAITravelGuide(destinationQuery, days = 3) {
   const cleanDays = Math.min(Math.max(parseInt(days, 10) || 3, 1), 7);
-  const activeKey = apiKey || (typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env.VITE_GEMINI_API_KEY : '');
 
   // 1. Check Curated Expert Destinations (Instant, 100% accurate real-world data)
   const expertMatch = matchExpertDestination(destinationQuery);
@@ -243,78 +242,7 @@ export async function generateAITravelGuide(destinationQuery, days = 3, apiKey =
     };
   }
 
-  // 2. If Gemini API key is provided, try Live Google Gemini 1.5 Flash
-  if (activeKey && activeKey.trim().length > 10) {
-    try {
-      const prompt = `You are a world-class travel editor for Firestorm Travel Guides.
-Generate a comprehensive ${cleanDays}-day structured JSON travel guide for "${destinationQuery}".
-Include EXACT REAL-WORLD LANDMARK NAMES (no generic placeholders), exact time slots (Morning, Afternoon, Evening, Night), and authentic local food dishes.
-Reply with ONLY a valid raw JSON object strictly following this schema:
-{
-  "destination": "${destinationQuery}",
-  "country": "Country name",
-  "daysCount": ${cleanDays},
-  "tagline": "One catchy punchy sentence summarizing the city/attraction vibe",
-  "bestTimeToVisit": "Months to visit and weather rationale",
-  "dailyBudgetUSD": 95,
-  "topAttractions": [
-    { "name": "Exact attraction name", "fee": "Ticket cost (e.g. $15 or Free)", "insiderTip": "Specific tip to avoid queues" },
-    { "name": "Exact attraction name", "fee": "Ticket cost", "insiderTip": "Specific tip" },
-    { "name": "Exact attraction name", "fee": "Ticket cost", "insiderTip": "Specific tip" }
-  ],
-  "itineraryDays": [
-    {
-      "dayNumber": 1,
-      "dayTitle": "Theme of Day 1",
-      "slots": [
-        { "period": "Morning (08:30 - 12:00)", "activity": "Exact place/activity name", "description": "What to do and breakfast tip", "cost": "$15" },
-        { "period": "Afternoon (13:00 - 17:00)", "activity": "Exact place/activity name", "description": "Attraction exploration and lunch", "cost": "$25" },
-        { "period": "Evening (17:30 - 20:30)", "activity": "Exact viewpoint & Dinner", "description": "Scenic spot and dining", "cost": "$30" },
-        { "period": "Night (21:00+)", "activity": "Exact evening spot or market", "description": "Atmospheric evening spot", "cost": "$12" }
-      ]
-    }
-  ],
-  "budgetTiers": {
-    "backpacker": "$35 - $50 / day",
-    "midRange": "$90 - $140 / day",
-    "luxury": "$280+ / day"
-  },
-  "localTips": [
-    "Tip on public transit and payment cards",
-    "Tipping culture and etiquette guidance",
-    "Safety or common tourist scam to avoid"
-  ]
-}`;
-
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${activeKey}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: {
-              temperature: 0.7,
-              responseMimeType: "application/json"
-            }
-          })
-        }
-      );
-
-      if (response.ok) {
-        const data = await response.json();
-        const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-        if (rawText) {
-          const parsed = JSON.parse(rawText.replace(/```json|```/g, "").trim());
-          return { ...parsed, isLiveAI: true, daysCount: cleanDays };
-        }
-      }
-    } catch (err) {
-      console.warn("Gemini API call failed, falling back to live knowledge engine:", err);
-    }
-  }
-
-  // 3. Live Knowledge Engine: Fetch Real Wikipedia Summary
+  // 2. Live Knowledge Engine: Fetch Real Wikipedia Summary
   let wikiData = null;
   try {
     const wikiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(destinationQuery.trim())}`;

@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import AttractionCard from './components/AttractionCard';
 import AIGuideModal from './components/AIGuideModal';
 import WishlistDrawer from './components/WishlistDrawer';
-import ApiKeyModal from './components/ApiKeyModal';
 import { initialDestinations } from './data/destinations';
 import { generateAITravelGuide } from './services/aiService';
 import { 
@@ -12,13 +11,41 @@ import {
   MapPin, CheckCircle2, ArrowRight 
 } from 'lucide-react';
 
-
 export default function App() {
   const [destinations] = useState(initialDestinations);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeGuide, setActiveGuide] = useState(null);
   const [isLoadingGuide, setIsLoadingGuide] = useState(false);
   const [isGuideModalOpen, setIsGuideModalOpen] = useState(false);
+
+  // Dark / Light Theme state (persisted in localStorage, defaults to dark)
+  const [darkMode, setDarkMode] = useState(() => {
+    try {
+      const saved = localStorage.getItem('wanderai_theme');
+      if (saved) return saved === 'dark';
+      return true; // Default to dark mode
+    } catch {
+      return true;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      if (darkMode) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('wanderai_theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('wanderai_theme', 'light');
+      }
+    } catch (e) {
+      console.error("Theme storage error:", e);
+    }
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    setDarkMode(prev => !prev);
+  };
 
   // Wishlist state (persisted in localStorage)
   const [wishlist, setWishlist] = useState(() => {
@@ -31,12 +58,6 @@ export default function App() {
   });
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
 
-  // Gemini API Key state (persisted in localStorage)
-  const [apiKey, setApiKey] = useState(() => {
-    return localStorage.getItem('wanderai_gemini_key') || '';
-  });
-  const [isApiKeyModalOpen, setIsApiKeyModalOpen] = useState(false);
-
   // Currency State ('USD' | 'INR' | 'EUR')
   const [currency, setCurrency] = useState('USD');
 
@@ -48,12 +69,6 @@ export default function App() {
       console.error("Failed to save wishlist to localStorage:", e);
     }
   }, [wishlist]);
-
-  // Handle saving API key
-  const handleSaveApiKey = (key) => {
-    setApiKey(key);
-    localStorage.setItem('wanderai_gemini_key', key);
-  };
 
   // Toggle wishlist item
   const handleToggleWishlist = (dest) => {
@@ -84,7 +99,7 @@ export default function App() {
     setIsLoadingGuide(true);
     try {
       const targetDays = days || tripDays;
-      const guideData = await generateAITravelGuide(destinationQuery, targetDays, apiKey);
+      const guideData = await generateAITravelGuide(destinationQuery, targetDays);
       setActiveGuide(guideData);
     } catch (err) {
       console.error("Failed to generate AI guide:", err);
@@ -99,8 +114,6 @@ export default function App() {
     setIsLoadingGuide(false);
   };
 
-
-
   // Filter destinations
   const categories = ['All', 'Historical', 'Nature', 'Coastal', 'Spiritual', 'Urban'];
   const filteredDestinations = destinations.filter((dest) => {
@@ -109,15 +122,15 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 flex flex-col font-sans transition-colors duration-200">
       {/* Navbar */}
       <Navbar
         wishlistCount={wishlist.length}
         onOpenWishlist={() => setIsWishlistOpen(true)}
         currency={currency}
         setCurrency={setCurrency}
-        onOpenApiKeyModal={() => setIsApiKeyModalOpen(true)}
-        hasApiKey={Boolean(apiKey)}
+        darkMode={darkMode}
+        onToggleTheme={toggleTheme}
       />
 
       {/* Hero Section */}
@@ -137,22 +150,22 @@ export default function App() {
       {/* Main Showcase Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex-1 w-full">
         {/* Section Header with Category Tabs */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 sm:pb-8 border-b border-slate-800/80 mb-6 sm:mb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 sm:pb-8 border-b border-slate-200 dark:border-slate-800/80 mb-6 sm:mb-8">
           <div>
-            <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">
               <Compass className="w-4 h-4 shrink-0" />
               <span>Curated Attraction Database</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Featured Global Destinations
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
               Select an attraction to review verified entrance fees, opening hours, or generate an instant AI itinerary.
             </p>
           </div>
 
           {/* Category Filter Pills: scrollable on small screens */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-900 border border-slate-800 rounded-xl self-start md:self-auto text-xs overflow-x-auto max-w-full">
+          <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl self-start md:self-auto text-xs overflow-x-auto max-w-full">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -161,7 +174,7 @@ export default function App() {
                 className={`px-3 py-1.5 rounded-lg font-medium transition cursor-pointer shrink-0 ${
                   selectedCategory === cat
                     ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
-                    : 'text-slate-400 hover:text-white'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
                 {cat}
@@ -185,42 +198,42 @@ export default function App() {
         </div>
 
         {/* Architecture & Feature Highlights */}
-        <div className="mt-12 sm:mt-20 p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/60 to-slate-950 border border-slate-800 relative overflow-hidden">
+        <div className="mt-12 sm:mt-20 p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-slate-50 to-emerald-50/40 dark:from-slate-900 dark:via-slate-900/60 dark:to-slate-950 border border-slate-200 dark:border-slate-800 relative overflow-hidden shadow-sm dark:shadow-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 blur-[100px] pointer-events-none rounded-full" />
 
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">Technical Highlights</span>
-            <h3 className="text-lg sm:text-2xl font-bold text-white mt-1 mb-2.5 sm:mb-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Technical Highlights</span>
+            <h3 className="text-lg sm:text-2xl font-bold text-slate-900 dark:text-white mt-1 mb-2.5 sm:mb-3">
               Engineered for Travel Scale, Automation & Content Pipelines
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-5 sm:mb-6">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-5 sm:mb-6">
               Designed specifically for high-volume travel content networks. Features zero-dependency fallback generation, 
-              REST API integration with LLMs (Google Gemini), persistent client-side caching via LocalStorage, and a 100% responsive Tailwind architecture.
+              live Wikipedia knowledge integration, persistent client-side caching via LocalStorage, dynamic currency switching, and a 100% responsive dark/light theme.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs">
-              <div className="p-3.5 sm:p-4 rounded-xl bg-slate-950/70 border border-slate-800">
-                <p className="font-bold text-white mb-1 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Gemini LLM Engine</span>
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                <p className="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
+                  <span>Curated Travel Engine</span>
                 </p>
-                <p className="text-slate-400 text-[11px]">JSON-mode structured travel synthesis with custom temperature tuning.</p>
+                <p className="text-slate-600 dark:text-slate-400 text-[11px]">Structured travel synthesis covering 40+ destinations with genuine entry fees and schedules.</p>
               </div>
 
-              <div className="p-3.5 sm:p-4 rounded-xl bg-slate-950/70 border border-slate-800">
-                <p className="font-bold text-white mb-1 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                <p className="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                   <span>Zero-Break Caching</span>
                 </p>
-                <p className="text-slate-400 text-[11px]">Integrated offline fallback engine ensures zero demo failures or rate-limit blocks.</p>
+                <p className="text-slate-600 dark:text-slate-400 text-[11px]">Integrated offline fallback engine ensures zero demo failures or rate-limit blocks.</p>
               </div>
 
-              <div className="p-3.5 sm:p-4 rounded-xl bg-slate-950/70 border border-slate-800">
-                <p className="font-bold text-white mb-1 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800">
+                <p className="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                   <span>Offline Storage</span>
                 </p>
-                <p className="text-slate-400 text-[11px]">Browser LocalStorage API integration for wishlists and traveler preferences.</p>
+                <p className="text-slate-600 dark:text-slate-400 text-[11px]">Browser LocalStorage API integration for wishlists, theme preferences, and traveler state.</p>
               </div>
             </div>
           </div>
@@ -228,16 +241,16 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 bg-slate-950/90 py-6 sm:py-8 text-xs text-slate-500">
+      <footer className="border-t border-slate-200 dark:border-slate-900 bg-white dark:bg-slate-950/90 py-6 sm:py-8 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-2 text-slate-400 justify-center sm:justify-start">
-            <Compass className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span className="font-bold text-white font-mono">WanderAI</span>
+          <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 justify-center sm:justify-start">
+            <Compass className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
+            <span className="font-bold text-slate-900 dark:text-white font-mono">WanderAI</span>
             <span>— AI Travel Guides Platform</span>
           </div>
 
           <p className="text-[11px]">
-            Engineered with React 19, Tailwind CSS v4 & Gemini API • Built for Firestorm Travel Guides Network
+            Engineered with React 19 & Tailwind CSS v4 • Built for Firestorm Travel Guides Network
           </p>
         </div>
       </footer>
@@ -269,13 +282,6 @@ export default function App() {
           setIsWishlistOpen(false);
           handleTriggerGuide(dest);
         }}
-      />
-
-      <ApiKeyModal
-        isOpen={isApiKeyModalOpen}
-        onClose={() => setIsApiKeyModalOpen(false)}
-        apiKey={apiKey}
-        onSaveApiKey={handleSaveApiKey}
       />
     </div>
   );
