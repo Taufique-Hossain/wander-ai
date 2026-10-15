@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, MapPin, Calendar, DollarSign, Sparkles, Heart, Check } from 'lucide-react';
+import { formatCurrency, formatPriceString } from '../utils/currency';
 
 export default function AttractionCard({ 
   destination, 
@@ -8,9 +9,7 @@ export default function AttractionCard({
   onToggleWishlist,
   currency 
 }) {
-  const currencySymbol = currency === 'INR' ? '₹' : currency === 'EUR' ? '€' : '$';
-  const currencyMultiplier = currency === 'INR' ? 83 : currency === 'EUR' ? 0.92 : 1;
-  const budgetConverted = Math.round(destination.dailyBudget * currencyMultiplier);
+  const budgetFormatted = formatCurrency(destination.dailyBudget, currency);
 
   return (
     <div className="group relative bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-950/20 flex flex-col">
@@ -21,6 +20,10 @@ export default function AttractionCard({
           alt={destination.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80";
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
 
@@ -30,8 +33,12 @@ export default function AttractionCard({
             {destination.category}
           </span>
           <button
-            onClick={() => onToggleWishlist(destination)}
-            className={`p-2 rounded-full backdrop-blur-md border transition ${
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onToggleWishlist(destination);
+            }}
+            className={`p-2 rounded-full backdrop-blur-md border transition cursor-pointer ${
               isWishlisted
                 ? 'bg-rose-500 text-white border-rose-400 shadow-md shadow-rose-500/30'
                 : 'bg-slate-950/70 text-slate-300 border-slate-700/60 hover:text-white hover:bg-slate-900'
@@ -72,13 +79,15 @@ export default function AttractionCard({
             {destination.tagline}
           </p>
 
-          {/* Top Attractions Preview */}
+          {/* Top Attractions Preview with Currency Conversion */}
           <div className="space-y-1.5 mb-4">
             <p className="text-[11px] uppercase tracking-wider font-semibold text-slate-500">Key Highlights</p>
             {destination.topAttractions.slice(0, 2).map((attr, idx) => (
               <div key={idx} className="flex items-center justify-between text-xs bg-slate-950/60 rounded-lg px-2.5 py-1.5 border border-slate-800/50">
                 <span className="text-slate-300 truncate max-w-[170px]">{attr.name}</span>
-                <span className="text-[11px] font-mono text-emerald-400 font-medium">{attr.fee}</span>
+                <span className="text-[11px] font-mono text-emerald-400 font-medium">
+                  {formatPriceString(attr.fee, currency)}
+                </span>
               </div>
             ))}
           </div>
@@ -89,13 +98,14 @@ export default function AttractionCard({
           <div>
             <p className="text-[10px] text-slate-500 uppercase font-semibold">Est. Daily Budget</p>
             <p className="text-sm font-bold text-white font-mono">
-              {currencySymbol}{budgetConverted} <span className="text-[10px] font-normal text-slate-400">/day</span>
+              {budgetFormatted} <span className="text-[10px] font-normal text-slate-400">/day</span>
             </p>
           </div>
 
           <button
+            type="button"
             onClick={() => onGenerateGuide(destination.name)}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-slate-950 border border-emerald-500/30 hover:border-emerald-500 text-xs font-bold transition-all shadow-sm active:scale-95"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-slate-950 border border-emerald-500/30 hover:border-emerald-500 text-xs font-bold transition-all shadow-sm active:scale-95 cursor-pointer"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>AI Guide</span>

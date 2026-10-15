@@ -245,7 +245,10 @@ export default function App() {
         wishlist={wishlist}
         onRemoveItem={handleRemoveWishlistItem}
         onClearAll={handleClearWishlist}
-        onViewGuide={handleTriggerGuide}
+        onViewGuide={(dest) => {
+          setIsWishlistOpen(false);
+          handleTriggerGuide(dest);
+        }}
       />
 
       <ApiKeyModal

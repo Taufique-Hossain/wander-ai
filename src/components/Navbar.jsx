@@ -36,8 +36,9 @@ export default function Navbar({
             {['USD', 'INR', 'EUR'].map((curr) => (
               <button
                 key={curr}
+                type="button"
                 onClick={() => setCurrency(curr)}
-                className={`px-2 py-1 rounded font-medium transition ${
+                className={`px-2 py-1 rounded font-medium transition cursor-pointer ${
                   currency === curr
                     ? 'bg-emerald-500 text-slate-950 font-bold shadow-sm'
                     : 'text-slate-400 hover:text-white'
@@ -50,8 +51,9 @@ export default function Navbar({
 
           {/* API Key Modal Button */}
           <button
+            type="button"
             onClick={onOpenApiKeyModal}
-            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition cursor-pointer ${
               hasApiKey
                 ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/20'
                 : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'
@@ -64,8 +66,9 @@ export default function Navbar({
 
           {/* Wishlist Button */}
           <button
+            type="button"
             onClick={onOpenWishlist}
-            className="relative flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs font-medium transition"
+            className="relative flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs font-medium transition cursor-pointer"
           >
             <Heart className="w-4 h-4 text-rose-500 fill-rose-500/20" />
             <span className="hidden sm:inline">Wishlist</span>
