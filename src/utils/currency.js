@@ -25,33 +25,50 @@ export function formatPriceString(priceStr, currency = 'USD') {
 
   const config = CURRENCY_CONFIG[currency] || CURRENCY_CONFIG.USD;
 
-  // Convert USD ($) amounts
-  let formatted = priceStr.replace(/\$(\d+(?:\.\d+)?)/g, (_, num) => {
-    const converted = Math.round(parseFloat(num) * config.rate);
-    return `${config.symbol}${converted.toLocaleString()}`;
-  });
+  let formatted = priceStr;
 
-  // Convert Euro (€) amounts if currency is INR or USD
   if (currency === 'INR') {
+    // Convert USD ($) to INR
+    formatted = formatted.replace(/\$(\d+(?:\.\d+)?)/g, (_, num) => {
+      const inr = Math.round(parseFloat(num) * 83);
+      return `₹${inr.toLocaleString()}`;
+    });
+    // Convert Euro (€) to INR
     formatted = formatted.replace(/€(\d+(?:\.\d+)?)/g, (_, num) => {
       const inr = Math.round(parseFloat(num) * 90);
       return `₹${inr.toLocaleString()}`;
     });
+    // Convert Yen (¥) to INR
     formatted = formatted.replace(/¥(\d+(?:\.\d+)?)/g, (_, num) => {
       const inr = Math.round(parseFloat(num) * 0.55);
       return `₹${inr.toLocaleString()}`;
     });
+    // Convert IDR to INR
     formatted = formatted.replace(/IDR\s*([\d,.]+)/gi, (_, num) => {
       const cleanNum = parseFloat(num.replace(/,/g, ''));
       const inr = Math.round(cleanNum * 0.0053);
       return `₹${inr.toLocaleString()}`;
     });
   } else if (currency === 'EUR') {
+    // Convert USD ($) to EUR
     formatted = formatted.replace(/\$(\d+(?:\.\d+)?)/g, (_, num) => {
       const eur = Math.round(parseFloat(num) * 0.92);
       return `€${eur.toLocaleString()}`;
     });
+    // Convert INR (₹) to EUR
+    formatted = formatted.replace(/₹\s*([\d,]+)/g, (_, num) => {
+      const cleanNum = parseFloat(num.replace(/,/g, ''));
+      const eur = Math.max(1, Math.round(cleanNum / 90));
+      return `€${eur.toLocaleString()}`;
+    });
   } else if (currency === 'USD') {
+    // Convert INR (₹) to USD
+    formatted = formatted.replace(/₹\s*([\d,]+)/g, (_, num) => {
+      const cleanNum = parseFloat(num.replace(/,/g, ''));
+      const usd = Math.max(1, Math.round(cleanNum / 83));
+      return `$${usd.toLocaleString()}`;
+    });
+    // Convert Euro (€) to USD
     formatted = formatted.replace(/€(\d+(?:\.\d+)?)/g, (_, num) => {
       const usd = Math.round(parseFloat(num) * 1.09);
       return `$${usd.toLocaleString()}`;
@@ -60,3 +77,4 @@ export function formatPriceString(priceStr, currency = 'USD') {
 
   return formatted;
 }
+
