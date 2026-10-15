@@ -2536,4 +2536,2194 @@ export const EXPERT_DESTINATIONS = {
     "Book Kalka-Shimla Toy Train tickets on IRCTC up to 120 days in advance; morning Shivalik Deluxe Express is the most scenic."
   ]
 },
+
+  andaman: {
+  "destination": "Andaman & Nicobar Islands",
+  "country": "India",
+  "tagline": "Tropical archipelago paradise of turquoise coral reefs, powdery white sands, and colonial freedom history.",
+  "bestTimeToVisit": "October to May for calm azure seas, excellent scuba diving visibility, and sunny island days.",
+  "dailyBudgetUSD": 55,
+  "topAttractions": [
+    {
+      "name": "Radhanagar Beach (Havelock / Swaraj Dweep)",
+      "fee": "Free",
+      "insiderTip": "Voted Asia's best beach by Time Magazine; stay until 05:45 PM for an unforgettable crimson sunset over the Bay of Bengal."
+    },
+    {
+      "name": "Cellular Jail National Memorial & Light Show",
+      "fee": "₹30 / ₹150 (Light Show)",
+      "insiderTip": "Book evening Hindi/English Light & Sound tickets in advance; walk the gallows and Veer Savarkar's solitary cell."
+    },
+    {
+      "name": "Elephant Beach Coral Reef Snorkeling",
+      "fee": "Speedboat ₹1,000 / Snorkel ₹500",
+      "insiderTip": "Reach via a 20-minute speedboat from Havelock jetty or a 2-km guided trek through the mangrove jungle; spot parrotfish and sea turtles."
+    },
+    {
+      "name": "Ross Island (Netaji Subhash Chandra Bose Dweep)",
+      "fee": "₹50 (Ferry ₹400)",
+      "insiderTip": "Historic British administrative headquarters abandoned to nature; deer and peacocks roam among century-old banyan root ruins."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Port Blair Heritage: Cellular Jail & Corbyn's Cove",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Cellular Jail Historical Tour & Museum",
+          "description": "Walk the seven-pronged panopticon prison where Indian freedom fighters endured solitary confinement; visit the central watchtower.",
+          "cost": "₹30"
+        },
+        {
+          "period": "Afternoon (13:30 - 16:30)",
+          "activity": "Corbyn's Cove Beach & Coastal Drive",
+          "description": "Relax on the curved coconut-palm beach, take an optional jet ski ride, and enjoy fresh tender coconut water.",
+          "cost": "₹400"
+        },
+        {
+          "period": "Evening (17:15 - 19:30)",
+          "activity": "Cellular Jail Light and Sound Show",
+          "description": "Emotional narrative of India's heroic struggle for independence narrated by an ancient Peepal tree with dramatic illumination.",
+          "cost": "₹150"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Fresh Island Seafood Feast at New Lighthouse Restaurant",
+          "description": "Feast on fresh grilled lobster, butter garlic crab, tandoori tiger prawns, and fish curry overlooking the harbor.",
+          "cost": "₹750"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Catamaran Cruise to Havelock & Radhanagar Sunset",
+      "slots": [
+        {
+          "period": "Morning (07:30 - 11:30)",
+          "activity": "High-Speed Catamaran Cruise (Makruzz/Nautika)",
+          "description": "Sail 90 minutes across the open turquoise Bay of Bengal from Port Blair to Havelock Island (Swaraj Dweep).",
+          "cost": "₹1,400"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:00)",
+          "activity": "Kalapathar Beach & Island Exploration",
+          "description": "Admire contrasting black volcanic boulders set against bright aqua waters and fine white sand fringed by dense tropical rainforest.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Radhanagar Beach Sunset Walk (Beach No. 7)",
+          "description": "Walk barefoot along miles of silky white sand as waves crash in rhythmic turquoise surf under a fiery purple sunset.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Beach Shack Candlelight Dinner at Something Different",
+          "description": "Dine on wood-fired thin-crust pizza and grilled catch-of-the-day surrounded by beach decor and sea breezes.",
+          "cost": "₹650"
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "dayTitle": "Elephant Beach Coral Reefs & Water Sports",
+      "slots": [
+        {
+          "period": "Morning (08:00 - 12:30)",
+          "activity": "Speedboat to Elephant Beach & Guided Snorkeling",
+          "description": "Explore vibrant live brain coral formations, clownfish, and sea anemones in warm shallow waters.",
+          "cost": "₹1,200"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Undersea Sea Walk / Scuba Diving at Nemo Reef",
+          "description": "Walk on the ocean floor wearing an air-supplied helmet surrounded by colorful tropical fish schools.",
+          "cost": "₹2,500"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Sunset Cafe Chilling at Havelock Jetty",
+          "description": "Sip iced coconut coffee and tropical smoothies while watching fishing boats return to the dock.",
+          "cost": "₹200"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Night Kayaking among Bioluminescent Waters",
+          "description": "Paddle into mangrove estuaries on a dark night where bioluminescent plankton glow blue with every paddle stroke.",
+          "cost": "₹1,800"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹2,200 - ₹3,200 / day (government ferry + bamboo beach huts + local Bengali dhabas)",
+    "midRange": "₹5,500 - ₹9,000 / day (private catamaran + AC beachfront resort + water sports)",
+    "luxury": "₹22,000+ / day (Taj Exotica Resort & Spa Radhanagar or Barefoot at Havelock + private speedboats)"
+  },
+  "localTips": [
+    "Book private catamaran tickets (Makruzz/Nautika) at least 2 weeks in advance during peak season (Nov-Feb).",
+    "Cell phone connectivity on Havelock and Neil islands is limited to BSNL and Airtel; expect patchy internet and enjoy an offline vacation.",
+    "Strict government environmental laws: collecting corals, shells, or sea life from beaches is a punishable offense."
+  ]
+},
+
+  udaipur: {
+  "destination": "Udaipur",
+  "country": "India",
+  "tagline": "The City of Lakes and Venice of the East: floating marble palaces, historic Mewar courtyards, and sunset boat cruises.",
+  "bestTimeToVisit": "October to March for sunny daytime strolls and pleasant lake breezes.",
+  "dailyBudgetUSD": 40,
+  "topAttractions": [
+    {
+      "name": "City Palace Complex & Crystal Gallery",
+      "fee": "₹330 / ₹650 (Museum + Crystal)",
+      "insiderTip": "Rajasthan's largest palace complex; hire an official Mewar guide to see the Mor Chowk (peacock courtyard) in detail."
+    },
+    {
+      "name": "Lake Pichola Sunset Boat Cruise to Jag Mandir",
+      "fee": "₹450 / ₹800 (Sunset Cruise)",
+      "insiderTip": "Take the 05:00 PM sunset cruise from City Palace jetty to explore the island palace where Shah Jahan once took refuge."
+    },
+    {
+      "name": "Bagore ki Haveli & Dharohar Folk Dance",
+      "fee": "₹100 (Entry) + ₹100 (Dance Show)",
+      "insiderTip": "Queue at 06:15 PM at Gangaur Ghat for the 07:00 PM performance featuring fire dancers, puppets, and 11-pot balancing stunts."
+    },
+    {
+      "name": "Sajjangarh Monsoon Palace Sunset",
+      "fee": "₹110 (Entry) + ₹300 (Shared Jeep)",
+      "insiderTip": "Perched 3,100 ft atop the Aravalli hills overlooking all five lakes; reach by 05:15 PM for the best sunset panorama."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "City Palace Heritage, Lake Pichola & Dharohar Dance",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "City Palace of Udaipur & Mardana Mahal",
+          "description": "Wander through marble balconies, inlaid mirror chambers, and silver galleries overlooking Lake Pichola.",
+          "cost": "₹350"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Jagdish Temple & Old City Silver Bazaars",
+          "description": "Admire intricate three-story carved Hindu temple architecture, followed by browsing silver jewelry and miniature art on Jagdish Chowk.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Evening (17:00 - 18:30)",
+          "activity": "Lake Pichola Sunset Boat Cruise past Taj Lake Palace",
+          "description": "Glide across the serene waters as the white marble palaces turn gold and pink in the twilight sun.",
+          "cost": "₹500"
+        },
+        {
+          "period": "Night (19:00 - 21:30)",
+          "activity": "Bagore ki Haveli Dharohar Dance & Ambrai Dinner",
+          "description": "Watch the famous Chari fire dance, then dine on rooftop Mewari Laal Maas with direct views of the illuminated City Palace.",
+          "cost": "₹650"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Saheliyon ki Bari, Fatehsagar & Monsoon Palace",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:00)",
+          "activity": "Saheliyon ki Bari (Courtyard of the Maids)",
+          "description": "Stroll among lush lawns, marble elephant fountains, and lotus pools designed for royal princesses.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Fatehsagar Lake Speedboating & Nehru Park Island",
+          "description": "Speedboat across the scenic lake to the garden island, followed by cold Kulhad Coffee at Bombay Market.",
+          "cost": "₹300"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Monsoon Palace (Sajjangarh) Mountain Sunset",
+          "description": "Ascend the winding hill sanctuary road to the 19th-century white palace for a 360-degree sunset over the lakes and Aravallis.",
+          "cost": "₹400"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Authentic Dal Baati Churma at Krishna Dal Bati Restro",
+          "description": "Indulge in traditional baatis soaked in pure desi ghee with spicy Panchmel Dal, churma, and garlic chutney.",
+          "cost": "₹350"
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "dayTitle": "Karni Mata Ropeway, Shilpgram & Gangaur Ghat",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:00)",
+          "activity": "Mansapurna Karni Mata Ropeway Cable Car",
+          "description": "Ride the gondola to Machhala Hill for an aerial panoramic perspective of Udaipur's palaces and mountain ranges.",
+          "cost": "₹150"
+        },
+        {
+          "period": "Afternoon (12:30 - 16:00)",
+          "activity": "Shilpgram Rural Arts and Crafts Complex",
+          "description": "Explore traditional desert huts from Rajasthan, Gujarat, and Goa; meet master weavers, potters, and musicians.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Gangaur Ghat Sunset & Acoustic Sitar by the Water",
+          "description": "Sit on the stone ghat steps by the water listening to folk musicians as pigeons flock and temple bells chime.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Candlelit Lakeside Dining at Upre by 1559 AD",
+          "description": "Dine in private heritage cabanas overlooking the glistening Lake Pichola skyline with royal Rajasthani delicacies.",
+          "cost": "₹800"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,500 - ₹2,200 / day (old city ghat hostels + street kachoris + walking tours)",
+    "midRange": "₹4,000 - ₹6,500 / day (lake-view Haveli boutique hotels + boat rides + rooftop dining)",
+    "luxury": "₹25,000+ / day (Taj Lake Palace floating on Pichola or The Leela Palace + private royal boat transfers)"
+  },
+  "localTips": [
+    "The best photography spots are Ambrai Ghat and Gangaur Ghat at sunrise when the water is mirror-still and devoid of crowds.",
+    "Most streets inside the old city around Jagdish Chowk are extremely narrow; rely on auto-rickshaws or walking rather than booking cabs.",
+    "Ask for a painting demonstration before purchasing Mewari miniature art to verify that real squirrel-hair brushes and stone colors are used."
+  ]
+},
+
+  rishikesh: {
+  "destination": "Rishikesh & Haridwar",
+  "country": "India",
+  "tagline": "The Yoga Capital of the World: foaming white water Ganga rapids, sacred Himalayan ghats, and evening fire ceremonies.",
+  "bestTimeToVisit": "September to November and February to May for adventure rafting and pleasant spiritual retreats.",
+  "dailyBudgetUSD": 35,
+  "topAttractions": [
+    {
+      "name": "Parmarth Niketan & Triveni Ghat Ganga Aarti",
+      "fee": "Free",
+      "insiderTip": "Attend Parmarth Niketan at 05:30 PM for Vedic singing, fire Havana, and devotional kirtan led by ashram students."
+    },
+    {
+      "name": "White Water Rafting (Shivpuri to Rishikesh)",
+      "fee": "₹600 - ₹1,000 (16 km)",
+      "insiderTip": "Grade III rapids including 'Roller Coaster' and 'Golf Course'; always wear the provided life jacket and helmet."
+    },
+    {
+      "name": "The Beatles Ashram (Chaurasi Kutia)",
+      "fee": "₹150 (Indians) / ₹600 (Foreigners)",
+      "insiderTip": "Where the Beatles wrote the White Album in 1968; explore meditation stone igloos and Beatles Cathedral graffiti art."
+    },
+    {
+      "name": "Har Ki Pauri Sacred Ghat (Haridwar)",
+      "fee": "Free",
+      "insiderTip": "The most sacred spot on the Ganges where nectar fell; attend the grand evening Maha Aarti with thousands of floating marigold lamps."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Sacred Rishikesh: Suspension Bridges, Beatles Ashram & Aarti",
+      "slots": [
+        {
+          "period": "Morning (07:00 - 10:30)",
+          "activity": "Sunrise Yoga by the Ganga & Ram Jhula Walk",
+          "description": "Participate in an open-air Hatha yoga session on the white river sand, then cross the iconic suspension footbridge.",
+          "cost": "₹200"
+        },
+        {
+          "period": "Afternoon (11:00 - 15:00)",
+          "activity": "The Beatles Ashram (Maharishi Mahesh Yogi)",
+          "description": "Wander through tranquil forested grounds, explore dome meditation pods, and photograph murals in the Beatles Hall.",
+          "cost": "₹150"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Parmarth Niketan Ashram Sunset Ganga Aarti",
+          "description": "Join holy men and devotees on the marble ghat as huge brass fire lamps illuminate the twilight Ganges.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Organic Ayurvedic Feast at Beatles Cafe / Little Buddha",
+          "description": "Dine on wood-fired healthy bowls, avocado toast, herbal chai, and banana nut pancakes overlooking the moonlit river.",
+          "cost": "₹350"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Shivpuri White Water Rafting & Neer Garh Waterfall",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 13:00)",
+          "activity": "16-km White Water Rafting & Cliff Jumping",
+          "description": "Raft thrilling rapids from Shivpuri past rocky Himalayan gorges, jump off a 20-ft cliff into the emerald river, and body-surf.",
+          "cost": "₹800"
+        },
+        {
+          "period": "Afternoon (13:30 - 16:30)",
+          "activity": "Neer Garh Waterfall Jungle Trek",
+          "description": "Hike through lush terraced hills along a mountain stream to two cascading turquoise pools ideal for a refreshing dip.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Triveni Ghat Evening Aarti & Holy Diya Floating",
+          "description": "Rishikesh's biggest daily river ritual with temple trumpets and chanting; release a leaf boat with burning camphor.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Traditional Garhwali Thali at Chotiwala (Est. 1958)",
+          "description": "Savor traditional mountain dishes: Kaphuli, Jhangora ki Kheer, Dal Tadka, and hot tandoori rotis.",
+          "cost": "₹300"
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "dayTitle": "Spiritual Haridwar: Mansa Devi & Har Ki Pauri",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:00)",
+          "activity": "Scenic Drive to Haridwar & Mansa Devi Cable Car",
+          "description": "Take the Udankhatola ropeway up Bilwa Parvat for sweeping views of Haridwar city and the Ganges plains.",
+          "cost": "₹160"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Bada Bazaar Walking Food Trail & Peda Tasting",
+          "description": "Sample famous Pandit Sevaram Sharma rabri, hot aloo puri, and authentic Mathura-style pedas in the ancient bazaar.",
+          "cost": "₹200"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Maha Ganga Aarti at Har Ki Pauri ('Footstep of God')",
+          "description": "Stand amidst thousands of devotees chanting in unison as priests swing flaming multi-tiered bronze candelabras.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Pure Vegetarian Feast at Hoshiyarpuri Haridwar",
+          "description": "Historic 1935 Punjabi eatery famous for Dal Makhani, Shahi Paneer, and hot Gulab Jamun.",
+          "cost": "₹350"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,200 - ₹1,800 / day (ashram stays / Tapovan hostels + satvik meals + shared autos ₹20)",
+    "midRange": "₹3,500 - ₹6,000 / day (river-view boutique resort + private rafting + guided temple tours)",
+    "luxury": "₹20,000+ / day (Ananda in the Himalayas wellness retreat or Taj Rishikesh Resort & Spa)"
+  },
+  "localTips": [
+    "Rishikesh and Haridwar are strictly holy vegetarian and alcohol-free cities by law; enjoy fresh fruit juices and herbal teas.",
+    "Rafting is officially closed during monsoon months (July to mid-September) for river safety.",
+    "Cross between Tapovan and Swarg Ashram easily via the new Janki Jhula suspension bridge if Ram Jhula is crowded."
+  ]
+},
+
+  meghalaya: {
+  "destination": "Meghalaya (Shillong & Cherrapunji)",
+  "country": "India",
+  "tagline": "The Abode of the Clouds: ancient living root bridges, thundering waterfalls, crystal transparent rivers, and sacred forests.",
+  "bestTimeToVisit": "October to April for clear sunny skies and crystal waters; June to September for roaring monsoon waterfalls.",
+  "dailyBudgetUSD": 42,
+  "topAttractions": [
+    {
+      "name": "Double Decker Living Root Bridge (Nongriat)",
+      "fee": "₹50 (Entry) + ₹100 Guide",
+      "insiderTip": "Requires climbing 3,500 stone steps down and up; start from Tyrna village at 07:00 AM and carry trekking poles."
+    },
+    {
+      "name": "Nohkalikai Falls (India's Tallest Plunge Fall, 1,115 ft)",
+      "fee": "₹20",
+      "insiderTip": "Visit between 10:00 AM and 01:00 PM before afternoon clouds envelop the gorge; admire the turquoise water pool at the base."
+    },
+    {
+      "name": "Dawki Umngot River Crystal Boat Ride",
+      "fee": "₹800 - ₹1,000 / boat",
+      "insiderTip": "Best experienced from November to March when the water is so clear that boats appear to be floating on air; view fish swimming 15 ft below."
+    },
+    {
+      "name": "Mawlynnong Village ('Cleanest Village in Asia')",
+      "fee": "Free",
+      "insiderTip": "Notice woven bamboo dustbins ('Khoh') outside every house; climb the 85-ft bamboo skywalk for views into the Bangladesh plains."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Shillong: Scotland of the East & Umiam Lake",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Umiam Lake (Barapani) & Water Sports",
+          "description": "Marvel at the vast turquoise reservoir flanked by pine hills, with optional kayaking or speedboat rides.",
+          "cost": "₹300"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Don Bosco Indigenous Museum & Lady Hydari Park",
+          "description": "Explore Asia's largest cultural museum depicting the lifestyle and costumes of Northeast India's tribes across 7 floors.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Laitlum Canyons Sunset Panorama",
+          "description": "Stand at the edge of the deep green amphitheater gorge as sunset fog rolls over Khasi tribal villages below.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Police Bazar Food Trail & Khasi Jadoh Feast",
+          "description": "Taste authentic Jadoh (rice cooked with aromatic meat herbs), Dohkhlieh salad, and hot pork/chicken momos at Trattoria.",
+          "cost": "₹350"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Cherrapunji (Sohra): Waterfalls & Limestone Caves",
+      "slots": [
+        {
+          "period": "Morning (08:00 - 12:00)",
+          "activity": "Mawkdok Dympep Valley Zipline & Nohkalikai Falls",
+          "description": "Soar across the 2,600-ft valley cable, then stand at the viewpoint of India's tallest 1,115-ft single plunge waterfall.",
+          "cost": "₹800"
+        },
+        {
+          "period": "Afternoon (12:30 - 16:00)",
+          "activity": "Mawsmai Cave & Seven Sisters Falls",
+          "description": "Squeeze through illuminated natural limestone caves filled with ancient stalactites and fossils.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "Eco Park Sunset over the Bangladesh Plains",
+          "description": "Walk the clifftop park where multiple waterfalls originate and plunge down the mountain border.",
+          "cost": "₹30"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Traditional Khasi Dinner at Sohra Cafe",
+          "description": "Savor smoked pork with bamboo shoots, red mountain rice, and fresh ginger tea by an open fireplace.",
+          "cost": "₹400"
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "dayTitle": "Trek to Double Decker Living Root Bridge (Nongriat)",
+      "slots": [
+        {
+          "period": "Morning (07:00 - 12:00)",
+          "activity": "Descent of 3,500 Steps through Subtropical Jungle",
+          "description": "Hike down from Tyrna village across thrilling single-wire suspension bridges to the 250-year-old living ficus root bridges.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Rainbow Falls & Natural Turquoise Rock Pools",
+          "description": "Trek an additional 1.5 hours deeper into the forest to swim in crystalline natural turquoise lagoons beneath a perpetual rainbow.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (16:00 - 19:30)",
+          "activity": "Ascent back to Tyrna / Overnight Nongriat Homestay",
+          "description": "Pace yourself on the stone staircase ascent surrounded by singing cicadas and rare butterfly species.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Homestay Organic Mountain Dinner",
+          "description": "Hearty local dinner of fresh garden vegetables, dal, country eggs, and warm lemongrass tea.",
+          "cost": "₹250"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,800 - ₹2,500 / day (shared Sumos from Shillong + village homestays + local Khasi meals)",
+    "midRange": "₹4,500 - ₹7,500 / day (private Bolero/Innova + resort in Sohra + guided root bridge hikes)",
+    "luxury": "₹16,000+ / day (Ri Kynjai Resort at Umiam Lake or Polo Orchid Resort Cherrapunji)"
+  },
+  "localTips": [
+    "Carry good waterproof shoes with ankle support; living root bridge treks have thousands of damp mossy steps.",
+    "Meghalaya is a matrilineal society where lineage and heritage pass through the youngest daughter; respect local customs.",
+    "The best months for transparent glass-like water in Dawki and Shnongpdeng are November through February; during monsoon the river turns brown."
+  ]
+},
+
+  amritsar: {
+  "destination": "Amritsar",
+  "country": "India",
+  "tagline": "The Spiritual Heart of Punjab: the radiant Golden Temple, legendary Langar community kitchen, and patriotic pride.",
+  "bestTimeToVisit": "October to March for pleasant sunny days and festive Diwali/Baisakhi celebrations.",
+  "dailyBudgetUSD": 35,
+  "topAttractions": [
+    {
+      "name": "Sri Harmandir Sahib (The Golden Temple)",
+      "fee": "Free (24/7)",
+      "insiderTip": "Visit at 04:30 AM for the Palki Sahib morning ceremony, or 10:00 PM when the illuminated gold reflects in the sacred Amrit Sarovar pool."
+    },
+    {
+      "name": "Guru Ramdas Langar Hall",
+      "fee": "Free (Donations accepted)",
+      "insiderTip": "The world's largest community kitchen serves up to 100,000 free meals daily regardless of caste or creed; volunteer to roll rotis."
+    },
+    {
+      "name": "Wagah Border Beating Retreat Ceremony",
+      "fee": "Free",
+      "insiderTip": "Reach the stadium gates by 03:00 PM (ceremony starts at 04:30 PM in winter / 05:00 PM in summer); carry only your phone and wallet (no bags allowed)."
+    },
+    {
+      "name": "Jallianwala Bagh National Memorial",
+      "fee": "Free",
+      "insiderTip": "Located 2 minutes from the Golden Temple; see the preserved bullet marks on the brick walls and the historic Martyrs' Well."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "The Golden Temple, Langar & Jallianwala Bagh",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:30)",
+          "activity": "Golden Temple Sanctum Sanctorum & Amrit Sarovar",
+          "description": "Cover your head, wash feet at the threshold, walk the marble Parikrama, and listen to continuous live Gurbani Kirtan.",
+          "cost": "Free"
+        },
+        {
+          "period": "Afternoon (13:00 - 15:30)",
+          "activity": "Langar Hall Experience & Volunteering",
+          "description": "Sit in cross-legged rows (Pangat) enjoying hot rotis, dal, and kheer; join the dishwashing or vegetable chopping seva.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (16:00 - 18:30)",
+          "activity": "Jallianwala Bagh & Partition Museum Walk",
+          "description": "Pay homage at the flame monument commemorating the 1919 massacre, then explore poignant audio recordings at Town Hall.",
+          "cost": "₹10"
+        },
+        {
+          "period": "Night (19:30 - 22:00)",
+          "activity": "Kesar Da Dhaba (Est. 1916) & Golden Temple Night View",
+          "description": "Feast on 12-hour slow-cooked Dal Makhani with Lachha Paratha and Firni, then view the glittering golden temple lit at night.",
+          "cost": "₹350"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Wagah Border Patriotic Ceremony & Street Food Trail",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Amritsari Kulcha Breakfast at Bhai Kulwant Singh",
+          "description": "Taste authentic crispy tandoori stuffed Potato-Paneer Kulchas dripping with desi ghee, served with tangy chhole and onions.",
+          "cost": "₹120"
+        },
+        {
+          "period": "Afternoon (13:00 - 14:30)",
+          "activity": "Gobindgarh Fort & Punjab Heritage Museum",
+          "description": "Explore the 18th-century fortress of Maharaja Ranjit Singh, see the Toshakhana treasury, and watch 7D martial shows.",
+          "cost": "₹150"
+        },
+        {
+          "period": "Evening (15:00 - 19:00)",
+          "activity": "Wagah Border Indo-Pak Beating Retreat Parade",
+          "description": "Join 20,000 spectators waving tricolors as BSF soldiers perform high-stepping military drills to lower the national flags.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Makhan Fish & Ahuja Creamy Lassi Food Trail",
+          "description": "Savor Amritsari fried fish seasoned with carom seeds (Ajwain), followed by thick malai-topped sweet lassi at Ahuja Lassi.",
+          "cost": "₹400"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,000 - ₹1,500 / day (temple Sarai guesthouses + free langar + shared autos ₹30)",
+    "midRange": "₹3,000 - ₹5,000 / day (heritage hotel near Golden Temple + private cab to Wagah Border + food tours)",
+    "luxury": "₹14,000+ / day (Taj Swarna Amritsar or Hyatt Regency + VIP Wagah Border seating)"
+  },
+  "localTips": [
+    "Head covering is mandatory for everyone (men and women) inside the Golden Temple complex; carry a handkerchief or buy a scarf at the entrance for ₹10.",
+    "Leave all backpacks, cigarettes, and lighters at your hotel when visiting Wagah Border; security allows ONLY phones and wallets inside.",
+    "The Golden Temple Langar is 100% free and open 24/7; it is one of the most humbling and moving human experiences on Earth."
+  ]
+},
+
+  ooty: {
+  "destination": "Ooty & Coonoor",
+  "country": "India",
+  "tagline": "The Queen of Hill Stations in the Nilgiris: heritage steam toy trains, fragrant tea plantations, and cool eucalyptus heights.",
+  "bestTimeToVisit": "October to June for pleasant weather; April-May for the annual Ooty Flower Show.",
+  "dailyBudgetUSD": 38,
+  "topAttractions": [
+    {
+      "name": "Nilgiri Mountain Railway (UNESCO Toy Train)",
+      "fee": "₹200 - ₹500",
+      "insiderTip": "Book on IRCTC 90 days ahead; the 2-hour steam train ride between Ooty and Coonoor crosses 16 tunnels and dramatic valley bridges."
+    },
+    {
+      "name": "Government Botanical Gardens (1848)",
+      "fee": "₹50",
+      "insiderTip": "Spread over 55 terraced acres featuring a 20-million-year-old fossilized tree trunk and over 1,000 exotic floral species."
+    },
+    {
+      "name": "Doddabetta Peak (8,652 ft)",
+      "fee": "₹30",
+      "insiderTip": "The highest summit in the Nilgiri hills; use the telescope house for panoramic views of Chamundi Hills and Coimbatore plains."
+    },
+    {
+      "name": "Dolphin's Nose Viewpoint (Coonoor)",
+      "fee": "₹20",
+      "insiderTip": "A giant natural rock formation resembling a dolphin's nose with a dramatic straight drop into Catherine Falls below."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Colonial Ooty: Botanical Gardens, Ooty Lake & Doddabetta",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Government Botanical Gardens & Italian Garden",
+          "description": "Walk among centuries-old cork oaks, ferns, glasshouse orchids, and manicured lawns dating back to the British Raj.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:00)",
+          "activity": "Doddabetta Peak & Nilgiri Tea Factory",
+          "description": "Ascend to the highest summit in Tamil Nadu, followed by visiting the tea museum to watch CTC tea manufacturing.",
+          "cost": "₹40"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "Ooty Lake Boating & Deer Park",
+          "description": "Rent a paddle boat or motorboat on the artificial lake built by John Sullivan in 1824, surrounded by eucalyptus groves.",
+          "cost": "₹250"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Commercial Road Homemade Chocolate & Toda Embroidery Trail",
+          "description": "Sample handmade rum-and-raisin fudge, dark chocolates, and dine on hot South Indian dosas and filter coffee.",
+          "cost": "₹300"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "UNESCO Toy Train to Coonoor & Tea Plantations",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 11:30)",
+          "activity": "Nilgiri Mountain Railway Steam Train Ride",
+          "description": "Chug through the mist on the historic meter-gauge rack railway past steep cliffs, waterfalls, and terraced tea estates.",
+          "cost": "₹205"
+        },
+        {
+          "period": "Afternoon (12:00 - 15:30)",
+          "activity": "Sim's Park & Highfield Tea Estate (Coonoor)",
+          "description": "Explore the 1874 botanical garden laid out in natural ravine style, then taste fresh green tea and eucalyptus oil.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (16:00 - 18:30)",
+          "activity": "Dolphin's Nose & Lamb's Rock Sunset",
+          "description": "Gaze over sheer ravines with cascading Catherine Falls in the distance as evening mist creeps up the valley.",
+          "cost": "₹30"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Cozy Anglo-Indian Dining at Earl's Secret / Savoy",
+          "description": "Dine on Shepherd's Pie, Nilgiri mutton kurma, and warm chocolate brownies inside a 180-year-old British colonial mansion.",
+          "cost": "₹650"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,400 - ₹2,000 / day (budget hill lodges + local government buses ₹15 + bakery snacks)",
+    "midRange": "₹3,800 - ₹6,000 / day (colonial heritage bungalows + private cab + toy train ride)",
+    "luxury": "₹18,000+ / day (Savoy - IHCL SeleQtions or Fortune Resort Sullivan Court)"
+  },
+  "localTips": [
+    "Purchase genuine Nilgiri tea, eucalyptus oil, and homemade chocolates from government-approved Co-operative stores on Charing Cross.",
+    "Carry light woolens even in summer; evening temperatures can drop quickly to 12°C in the high altitudes.",
+    "If toy train tickets are waitlisted, unreserved general compartment tickets go on sale at Ooty station 1 hour before departure."
+  ]
+},
+
+  coorg: {
+  "destination": "Coorg (Kodagu)",
+  "country": "India",
+  "tagline": "The Scotland of India: lush coffee and cardamom estates, misty Brahmagiri peaks, and unique Kodava warrior culture.",
+  "bestTimeToVisit": "October to April for coffee harvesting season and outdoor plantation trekking.",
+  "dailyBudgetUSD": 40,
+  "topAttractions": [
+    {
+      "name": "Namdroling Monastery (Tibetan Golden Temple, Bylakuppe)",
+      "fee": "Free",
+      "insiderTip": "Home to 5,000 monks and three 40-ft gilded statues of Buddha; attend the hypnotic 01:00 PM gong and horn prayer ritual."
+    },
+    {
+      "name": "Abbey Falls (Abbi Falls)",
+      "fee": "₹15",
+      "insiderTip": "Tucked inside private coffee and spice plantations; walk down the hanging bridge for photos of the roaring cascade."
+    },
+    {
+      "name": "Dubare Elephant Camp (Cauvery River)",
+      "fee": "₹100 (Ferry ₹30 / Bathing ₹200)",
+      "insiderTip": "Arrive at 08:30 AM to cross the river and participate in scrubbing and bathing retired timber elephants."
+    },
+    {
+      "name": "Raja's Seat (Madikeri)",
+      "fee": "₹10",
+      "insiderTip": "A seasonal garden of flowers and artificial fountains where Kodagu kings watched sunset over the endless misty Western Ghats ridges."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Bylakuppe Golden Temple, Dubare Elephants & Raja's Seat",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:00)",
+          "activity": "Namdroling Tibetan Monastery (Golden Temple)",
+          "description": "Admire magnificent golden statues of Amitayus, Shakyamuni, and Padmasambhava; browse Tibetan thangka art and incense.",
+          "cost": "Free"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Dubare Elephant Camp on the Cauvery River",
+          "description": "Cross the rocky river, observe elephant feeding, and learn about Asiatic elephant conservation from naturalist mahouts.",
+          "cost": "₹300"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "Raja's Seat Sunset & Musical Fountain",
+          "description": "Watch the sun dip behind layered misty mountain ridges, followed by light and musical water fountain shows.",
+          "cost": "₹20"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Authentic Kodava Pandi Curry Feast at Raintree",
+          "description": "Feast on iconic Coorg Pandi Curry (spiced with wild Kachampuli vinegar), Akki Roti (rice flatbread), and Kadambuttu.",
+          "cost": "₹450"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Coffee Plantation Trail, Abbey Falls & Madikeri Fort",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:00)",
+          "activity": "Guided Coffee & Black Pepper Plantation Walking Tour",
+          "description": "Walk through fragrant Arabica and Robusta coffee groves; learn how coffee cherries are hand-picked, pulped, and roasted.",
+          "cost": "₹300"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Abbey Falls & Hanging Bridge Walk",
+          "description": "Descend stone steps through dense cardamom and spice canopy to the roaring waterfall cascading into the Cauvery tributary.",
+          "cost": "₹30"
+        },
+        {
+          "period": "Evening (16:00 - 18:30)",
+          "activity": "Madikeri Fort & Palace Museum",
+          "description": "Explore the 17th-century stone fortress with life-sized elephant masonry, Gothic church museum, and panoramic city bastions.",
+          "cost": "₹25"
+        },
+        {
+          "period": "Night (19:00+)",
+          "activity": "Coorg Honey & Filter Coffee Tasting at Friday Market",
+          "description": "Sample pure unprocessed Coorg orange blossom honey, homemade passion fruit wine, and freshly ground filter coffee powder.",
+          "cost": "₹250"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,400 - ₹2,000 / day (coffee estate homestays + local KSRTC buses + mess thalis)",
+    "midRange": "₹3,800 - ₹6,500 / day (heritage plantation bungalow + private car + jeep safari)",
+    "luxury": "₹22,000+ / day (Evolve Back Kuruba Safari Lodge or The Tamara Coorg nestled in rainforest)"
+  },
+  "localTips": [
+    "Buy authentic Kachampuli (Coorg dark garcinia vinegar) and locally roasted Arabica coffee beans directly from estate owners.",
+    "Hire an open-top 4x4 jeep to reach Mandalpatti viewpoint ('Mugilu-Pete' or Market of Clouds) for sunrise; regular sedans cannot traverse the terrain.",
+    "Leeches are common in coffee plantations during monsoons; apply salt or tobacco powder to footwear before estate walks."
+  ]
+},
+
+  hampi: {
+  "destination": "Hampi",
+  "country": "India",
+  "tagline": "The UNESCO World Heritage Boulder Wonderland: majestic ruins of the 14th-century Vijayanagara Empire on the Tungabhadra River.",
+  "bestTimeToVisit": "October to March for sunny days and cool breezy evenings among the boulder landscapes.",
+  "dailyBudgetUSD": 35,
+  "topAttractions": [
+    {
+      "name": "Vijaya Vittala Temple & Stone Chariot",
+      "fee": "₹40 (Combined ASI ticket)",
+      "insiderTip": "Featured on the ₹50 Indian currency note; inspect the granite wheels that once rotated and the 56 musical pillar shrines."
+    },
+    {
+      "name": "Virupaksha Temple",
+      "fee": "₹25",
+      "insiderTip": "One of India's oldest continuously functioning temples since the 7th century; receive a blessing from the temple elephant Lakshmi."
+    },
+    {
+      "name": "Lotus Mahal & Elephant Stables",
+      "fee": "Included in ASI ticket",
+      "insiderTip": "Indo-Islamic architectural synthesis featuring 11 domed chambers that once housed the royal ceremonial war elephants."
+    },
+    {
+      "name": "Matanga Hill Sunrise Panorama",
+      "fee": "Free",
+      "insiderTip": "Hike up the stone steps at 05:45 AM for an epic 360-degree sunrise view over endless red granite boulders, banana plantations, and ancient ruins."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Sacred Centre: Virupaksha Temple, Hemakuta & Sunset",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:00)",
+          "activity": "Virupaksha Temple Complex & Hampi Bazaar",
+          "description": "Marvel at the 160-foot gopuram, inspect the pinhole inverted image of the tower, and walk the ancient chariot bazaar.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:00)",
+          "activity": "Kadalekalu Ganesha & Sasivekalu Ganesha Monoliths",
+          "description": "Admire colossal single-stone carvings of Lord Ganesha carved directly out of massive hillside granite boulders.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "Hemakuta Hill Sunset over Vijayanagara Temples",
+          "description": "Perch on sloping stone platforms surrounded by pre-Vijayanagara triple-chambered stone shrines as dusk glows orange.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Riverside Thali & Mango Tree Cafe",
+          "description": "Relax on floor cushions overlooking banana groves dining on South Indian thalis, Israeli shakshuka, and fresh banana lassi.",
+          "cost": "₹300"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Royal Centre: Vittala Stone Chariot & Elephant Stables",
+      "slots": [
+        {
+          "period": "Morning (08:00 - 12:00)",
+          "activity": "Vijaya Vittala Temple & Musical Pillars",
+          "description": "Ride the battery buggy or walk the old stone road; marvel at the world-famous Stone Chariot dedicated to Garuda.",
+          "cost": "₹40"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Zenana Enclosure, Lotus Mahal & Elephant Stables",
+          "description": "Explore the royal women's quarters, the tiered stepwell (Pushkarani), and the grand arches of the Elephant Stables.",
+          "cost": "Included"
+        },
+        {
+          "period": "Evening (16:00 - 18:30)",
+          "activity": "Coracle Boat Ride on the Tungabhadra River",
+          "description": "Spin across the swirling river in a traditional round woven wicker boat past ancient carved rock shrines.",
+          "cost": "₹400"
+        },
+        {
+          "period": "Night (19:00+)",
+          "activity": "Stargazing among the Ancient Boulders",
+          "description": "Clear, zero-pollution night skies with crisp views of the Milky Way arching over centuries-old ruins.",
+          "cost": "Free"
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "dayTitle": "Matanga Sunrise, Anegundi & Sanapur Lake",
+      "slots": [
+        {
+          "period": "Morning (05:45 - 09:00)",
+          "activity": "Matanga Hill 360-Degree Sunrise Hike",
+          "description": "Climb the highest peak in Hampi to witness the sun illuminate thousands of red boulders and the river winding into the horizon.",
+          "cost": "Free"
+        },
+        {
+          "period": "Afternoon (11:00 - 15:30)",
+          "activity": "Cross River to Anegundi ('Hippy Island') & Sanapur Lake",
+          "description": "Rent a moped to cruise past emerald paddy fields to Sanapur Lake for cliff jumping and bamboo rafting.",
+          "cost": "₹350"
+        },
+        {
+          "period": "Evening (16:00 - 19:00)",
+          "activity": "Anjaneya Hill (Birthplace of Lord Hanuman)",
+          "description": "Climb the 575 white steps to the hilltop shrine at Kishkindha for sweeping valley twilight views.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Farewell Wood-Fired Pizza & Acoustic Evening",
+          "description": "Unwind at a cozy open-air boulder cafe with fresh lime soda and thin-crust pizza under fairy lights.",
+          "cost": "₹350"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,200 - ₹1,800 / day (rented bicycle ₹150 + guesthouses in Kamalapur + local thalis)",
+    "midRange": "₹3,500 - ₹5,500 / day (KSTDC Mayura Bhuvaneshwari or Heritage Resort + auto tour + coracle rides)",
+    "luxury": "₹24,000+ / day (Evolve Back Kamalapura Palace with private stone pool villas)"
+  },
+  "localTips": [
+    "Rent a bicycle (₹150/day) or electric moped (₹400/day) to easily explore the vast 41-square-kilometer ruins at your own pace.",
+    "The single ASI entry ticket (₹40 for Indians / ₹600 for foreigners) is valid for both Vittala Temple and the Lotus Mahal/Elephant Stables on the same day.",
+    "Carry a hat, sunglasses, and at least 2 liters of water; the granite boulders absorb midday heat and shade is sparse."
+  ]
+},
+
+  mumbai: {
+  "destination": "Mumbai",
+  "country": "India",
+  "tagline": "The City of Dreams: colonial Victorian Gothic architecture, the Arabian Sea Queen's Necklace, Bollywood glamour, and dynamic street life.",
+  "bestTimeToVisit": "November to February for pleasant breezy coastal weather.",
+  "dailyBudgetUSD": 45,
+  "topAttractions": [
+    {
+      "name": "Gateway of India & The Taj Mahal Palace Hotel",
+      "fee": "Free",
+      "insiderTip": "Built in 1924 overlooking Mumbai Harbour; take photos at sunrise, then step into the Sea Lounge for high tea."
+    },
+    {
+      "name": "Marine Drive ('Queen's Necklace')",
+      "fee": "Free",
+      "insiderTip": "Walk the 3.6-km C-shaped coastal promenade at dusk when street lamps illuminate the coastline like a string of pearls."
+    },
+    {
+      "name": "Elephanta Caves (UNESCO World Heritage)",
+      "fee": "₹40 (Indians) / ₹600 (Foreigners) + Ferry ₹260",
+      "insiderTip": "Take the 1-hour ferry from Gateway of India; admire the colossal 20-foot three-headed Shiva Trimurti rock sculpture."
+    },
+    {
+      "name": "Chhatrapati Shivaji Maharaj Terminus (CSMT)",
+      "fee": "Free (Exterior)",
+      "insiderTip": "UNESCO Victorian Gothic railway masterpiece; photograph the illuminated facade at night."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Colonial South Mumbai, Gateway of India & Marine Drive",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Gateway of India & Colaba Heritage Walk",
+          "description": "Marvel at the basalt triumphal arch, view the iconic Taj Mahal Palace Hotel, and stroll past colonial buildings on Colaba Causeway.",
+          "cost": "Free"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:00)",
+          "activity": "CSMT Railway Station & Crawford Market",
+          "description": "Admire gargoyles and stained glass at CSMT, then explore the bustling 1869 fruit, spice, and pet market designed by Lockwood Kipling.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Marine Drive Sunset & Girgaon Chowpatty Kulfi",
+          "description": "Perch on the tetrapods as the sun sets over the Arabian Sea, then sample Pav Bhaji and Malai Kulfi at Chowpatty beach.",
+          "cost": "₹250"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Heritage Parsi Dining at Britannia & Co. / Cafe Mondegar",
+          "description": "Dine on legendary Berry Pulao, Sali Boti, and caramel custard accompanied by retro jukebox music.",
+          "cost": "₹500"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Elephanta Island Rock Caves & Bohemian Bandra",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 13:00)",
+          "activity": "Ferry to Elephanta Caves (Rock-Cut Temples)",
+          "description": "Cruise across Mumbai Harbour to the island; explore 5th-century basalt cave shrines dedicated to Lord Shiva.",
+          "cost": "₹300"
+        },
+        {
+          "period": "Afternoon (14:00 - 17:00)",
+          "activity": "Drive across Bandra-Worli Sea Link to Bandra",
+          "description": "Cross the 8-lane cable-stayed bridge over open sea, then explore Bandra's Portuguese heritage chapels and Bollywood star homes.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Evening (17:30 - 19:30)",
+          "activity": "Bandra Bandstand Sunset & Castella de Aguada Fort",
+          "description": "Walk the seaside promenade past Shah Rukh Khan's Mannat mansion to the 1640 Portuguese fort ruins.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Coastal Seafood Feast at Gajalee or Mahesh Lunch Home",
+          "description": "Feast on Bombil (Bombay Duck) Fry, Butter Garlic Crab, Mangalorean Ghee Roast, and Neer Dosa.",
+          "cost": "₹850"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,500 - ₹2,200 / day (hostel in South Mumbai/Bandra + Mumbai Local Train ₹10 + street Vada Pav ₹20)",
+    "midRange": "₹4,500 - ₹7,500 / day (3-star boutique hotel + Uber cabs + heritage restaurants)",
+    "luxury": "₹25,000+ / day (The Taj Mahal Palace Colaba or The Oberoi Marine Drive)"
+  },
+  "localTips": [
+    "Travel on Mumbai Local Trains between 11:30 AM and 04:30 PM to avoid the intense peak rush hour crush.",
+    "Taste authentic street Vada Pav at Aram Milk Bar outside CSMT or Ashok Vada Pav near Kirti College.",
+    "Always take metered black-and-yellow taxis (Kaali Peeli) or use Uber/Ola; drivers in South Mumbai strictly run on the meter."
+  ]
+},
+
+  delhi: {
+  "destination": "Delhi",
+  "country": "India",
+  "tagline": "The Historic Heart of India: Mughal sandstone fortresses, tree-lined British imperial boulevards, and legendary culinary alleys.",
+  "bestTimeToVisit": "October to March for cool pleasant days and festive winter gardens.",
+  "dailyBudgetUSD": 38,
+  "topAttractions": [
+    {
+      "name": "Qutub Minar & Iron Pillar (UNESCO)",
+      "fee": "₹50 (Indians) / ₹600 (Foreigners)",
+      "insiderTip": "The world's tallest brick minaret (73 meters) built in 1192 AD; inspect the 1,600-year-old rustless Gupta-era Iron Pillar."
+    },
+    {
+      "name": "Humayun's Tomb (UNESCO)",
+      "fee": "₹50 / ₹600",
+      "insiderTip": "The architectural precursor to the Taj Mahal; visit at 04:00 PM when golden hour light illuminates the red sandstone and marble dome."
+    },
+    {
+      "name": "Red Fort (Lal Qila) & Jama Masjid",
+      "fee": "₹50 (Red Fort) / Masjid Free",
+      "insiderTip": "Explore the Diwan-i-Aam and Diwan-i-Khas, then cross into India's largest mosque that can hold 25,000 worshippers."
+    },
+    {
+      "name": "India Gate & Kartavya Path",
+      "fee": "Free",
+      "insiderTip": "Walk the ceremonial boulevard connecting Rashtrapati Bhavan to the 42-meter war memorial arch, especially magical illuminated at night."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Old Delhi: Jama Masjid, Chandni Chowk & Red Fort",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:00)",
+          "activity": "Jama Masjid & Cycle-Rickshaw Ride in Old Delhi",
+          "description": "Climb the south minaret of the 17th-century mosque for panoramic views, then ride through the sensory spice maze of Khari Baoli.",
+          "cost": "₹150"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Paranthe Wali Gali & Red Fort (Lal Qila)",
+          "description": "Feast on deep-fried stuffed paranthas (rabri, paneer, lemon), then tour Emperor Shah Jahan's formidable red sandstone fortress.",
+          "cost": "₹200"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "Gurudwara Bangla Sahib & Sacred Sarovar",
+          "description": "Visit the serene white-marble Sikh shrine, listen to devotional singing, and view the sacred healing water pool.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Mughlai Feast at Karim's (Est. 1913) / Havemore",
+          "description": "Savor Mutton Burra Kebabs, Butter Chicken, Chicken Jahangiri, and hot Roomali Rotis near Jama Masjid Gate 1.",
+          "cost": "₹550"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Imperial New Delhi: Humayun's Tomb, Qutub Minar & India Gate",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:00)",
+          "activity": "Humayun's Tomb & Sunder Nursery Heritage Park",
+          "description": "Stroll symmetrical Persian Charbagh water gardens and UNESCO Mughal mausoleums surrounded by 90 acres of ecological flora.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Qutub Minar Complex & Mehrauli Archaeological Park",
+          "description": "Marvel at intricate calligraphic Quranic carvings on the minaret and walk through ancient Tomar Raj ruins.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Lotus Temple (Bahá'í House of Worship) & India Gate",
+          "description": "Admire the 27 freestanding marble petals of the Lotus Temple in silence, followed by evening ice cream stroll at India Gate.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Dilli Haat Crafts Bazaar & Regional Food Stalls",
+          "description": "Shop for handicrafts from every Indian state and feast on Rajasthani Pyaaz Kachori, Naga pork ribs, and Kashmiri Kahwa.",
+          "cost": "₹400"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,200 - ₹1,800 / day (hostel in Paharganj/South Delhi + Delhi Metro smart card + street chaat)",
+    "midRange": "₹3,500 - ₹5,500 / day (heritage boutique hotel in Connaught Place/Hauz Khas + metro/cab combo)",
+    "luxury": "₹22,000+ / day (The Imperial New Delhi or The Leela Palace Chanakyapuri)"
+  },
+  "localTips": [
+    "The Delhi Metro is one of the world's best, cheapest, and cleanest subway networks; use it to beat heavy city traffic.",
+    "Most museums and historical monuments in Delhi (including the Red Fort) are CLOSED on MONDAYS; plan around this.",
+    "The first coach in the direction of travel on every Delhi Metro train is reserved exclusively for women."
+  ]
+},
+
+  pondicherry: {
+  "destination": "Puducherry (Pondicherry)",
+  "country": "India",
+  "tagline": "The French Riviera of the East: pastel colonial villas, seaside promenades, Auroville spiritual harmony, and artisanal bakeries.",
+  "bestTimeToVisit": "October to March for sunny, breezy beach walks and cool tropical evenings.",
+  "dailyBudgetUSD": 38,
+  "topAttractions": [
+    {
+      "name": "White Town (French Quarter) Walking Tour",
+      "fee": "Free",
+      "insiderTip": "Rent a vintage bicycle (₹100/day) at 07:00 AM to photograph mustard-yellow colonial mansions draped in bright pink bougainvillea without cars."
+    },
+    {
+      "name": "Promenade Beach (Goubert Avenue)",
+      "fee": "Free",
+      "insiderTip": "Closed to all motor vehicles every evening from 06:00 PM to 07:30 AM; perfect for seaside walking past the Mahatma Gandhi statue."
+    },
+    {
+      "name": "Auroville & Matrimandir ('Temple of the Mother')",
+      "fee": "Free (Advance pass required)",
+      "insiderTip": "Book viewing passes for the golden geodesic meditation dome online at least 3-5 days in advance at auroville.org."
+    },
+    {
+      "name": "Sri Aurobindo Ashram",
+      "fee": "Free",
+      "insiderTip": "Maintained in deep silence; pay respects at the flower-adorned marble Samadhi of Sri Aurobindo and Mirra Alfassa (The Mother)."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "French Quarter Heritage, Promenade Beach & Bakeries",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:00)",
+          "activity": "White Town Bicycle Tour & Sri Aurobindo Ashram",
+          "description": "Pedal past French street signs ('Rue Dumas', 'Rue Romain Rolland'), visit the quiet ashram, and see the Church of Our Lady of Angels.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "French Artisanal Cafe Lunch at Cafe des Arts / Coromandel",
+          "description": "Savor fresh butter croissants, crepes, Baguette sandwiches, and cold brew coffee in a shaded yellow heritage courtyard.",
+          "cost": "₹450"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Promenade Beach Walk past the French War Memorial",
+          "description": "Stroll along the rocky sea wall listening to crashing Bay of Bengal waves, and enjoy street roasted corn with lime chili.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Franco-Tamil Fusion Seafood Dinner at Villa Shanti",
+          "description": "Dine on grilled red snapper, creole prawn curry, and chocolate fondant inside a restored 19th-century French merchant home.",
+          "cost": "₹650"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Auroville Universal Township & Paradise Beach",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:30)",
+          "activity": "Auroville Township & Matrimandir Golden Globe",
+          "description": "Walk through shaded forest paths to the amphitheater to witness the colossal golden sphere dedicated to human unity.",
+          "cost": "Free"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Boat Ferry to Paradise Beach (Chunnambar Backwaters)",
+          "description": "Cruise through mangrove backwaters to the isolated white sand beach spit flanked by the river and the ocean.",
+          "cost": "₹350"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Serenity Beach Sunset & Surfer Watching",
+          "description": "Watch local surfers catch waves along the long granite breakwater jetty as the evening sea breeze kicks in.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Wood-Fired Neapolitan Pizza at Tanto Pizzeria",
+          "description": "Feast on farm-fresh organic Italian pizzas, homemade pasta, and gelato made with ingredients from Auroville farms.",
+          "cost": "₹450"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,200 - ₹1,800 / day (rented scooter ₹350 + guesthouse + French bakery breakfasts)",
+    "midRange": "₹3,500 - ₹6,000 / day (heritage French villa hotel + private cab + seaside dining)",
+    "luxury": "₹16,000+ / day (Palais de Mahe - CGH Earth or La Villa French Quarter)"
+  },
+  "localTips": [
+    "Renting a scooter (₹350/day) or bicycle (₹100/day) is by far the best way to move between White Town, Auroville, and beaches.",
+    "Promenade Beach has large rocky tetrapods; swimming is strictly prohibited there for safety. Go to Paradise Beach or Eden Beach (Blue Flag) for swimming.",
+    "Auroville boutique stores in White Town sell world-renowned handmade paper, spirulina, and natural essential incense."
+  ]
+},
+
+  jaisalmer: {
+  "destination": "Jaisalmer",
+  "country": "India",
+  "tagline": "The Golden City of the Thar Desert: a living medieval sandstone fortress, yellow havelis, and camel safaris under starlit dunes.",
+  "bestTimeToVisit": "October to March for comfortable desert weather and the famous Jaisalmer Desert Festival.",
+  "dailyBudgetUSD": 38,
+  "topAttractions": [
+    {
+      "name": "Jaisalmer Fort (Sonar Qila / Golden Fort)",
+      "fee": "Free / ₹100 Palace Museum",
+      "insiderTip": "One of the world's very few 'living forts' where 4,000 residents still live inside 99 bastions; admire yellow sandstone changing color with sunlight."
+    },
+    {
+      "name": "Sam Sand Dunes Desert Safari & Swiss Tent Camp",
+      "fee": "₹1,500 - ₹3,000 (Camel + Camp + Dinner)",
+      "insiderTip": "Head 40 km into the Thar Desert for a sunset camel ride across 30-meter sand dunes, followed by Kalbeliya gypsy dance and bonfire."
+    },
+    {
+      "name": "Patwon ki Haveli (Mansion of Brocade Merchants)",
+      "fee": "₹50 (Indians) / ₹100 (Foreigners)",
+      "insiderTip": "A cluster of 5 opulent havelis carved entirely of golden sandstone with 60 intricately carved jharokha balconies."
+    },
+    {
+      "name": "Gadisar Lake & Desert Gate",
+      "fee": "Free / Boating ₹100",
+      "insiderTip": "A 14th-century artificial rainwater lake surrounded by yellow sandstone temples and chhatris; visit at dawn when catfish gather at the ghats."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Living Golden Fort, Jain Temples & Patwon Haveli",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:30)",
+          "activity": "Jaisalmer Fort Walking Tour & Seven Jain Temples",
+          "description": "Walk through the four massive gates into the fort; inspect exquisite 12th-century Dilwara-style yellow marble Jain temple carvings.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Patwon ki Haveli & Nathmal ki Haveli",
+          "description": "Marvel at stone filigree lace-like jharokhas carved by two Muslim jeweler brothers who carved independent halves symmetrically.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Gadisar Lake Sunset & Tila ki Pol Gateway",
+          "description": "Glide across the peaceful waters on a paddle boat under the historic carved gateway as golden sunset glows on the water.",
+          "cost": "₹150"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Rooftop Desert Dining Overlooking the Illuminated Fort",
+          "description": "Savor Ker Sangri (desert bean delicacy), Gatte ki Sabzi, Laal Maas, and Bajra Roti under candle lanterns.",
+          "cost": "₹450"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Thar Desert: Kuldhara Ghost Village & Sam Sand Dunes",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Excursion to Kuldhara Cursed Ghost Village",
+          "description": "Explore the eerie abandoned 13th-century Paliwal Brahmin stone village that was abandoned overnight 200 years ago under a dark curse.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Afternoon (14:30 - 17:30)",
+          "activity": "Sam Sand Dunes Camel Safari & Dune Bashing",
+          "description": "Ride camels across undulating golden ripples of the Thar Desert, watch the crimson sun dip beneath the sands.",
+          "cost": "₹600"
+        },
+        {
+          "period": "Evening (18:00 - 20:30)",
+          "activity": "Desert Camp Bonfire & Kalbeliya Folk Dance",
+          "description": "Sit on rugs around a blazing desert fire enjoying live Manganiyar folk music, fire dancers, and Rajasthani hospitality.",
+          "cost": "Included"
+        },
+        {
+          "period": "Night (20:30+)",
+          "activity": "Traditional Buffet Dinner & Desert Stargazing",
+          "description": "Feast under the unpolluted Thar Desert sky where thousands of stars and the Milky Way sparkle brightly above your Swiss tent.",
+          "cost": "Included"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,200 - ₹1,800 / day (fort rooftop guesthouse + camel ride + local dal baati)",
+    "midRange": "₹3,500 - ₹6,000 / day (heritage golden haveli hotel + luxury desert camp at Sam)",
+    "luxury": "₹22,000+ / day (Suryagarh Jaisalmer luxury palace or The Serai desert camp)"
+  },
+  "localTips": [
+    "Spend at least one night inside the Living Fort to experience its quiet, enchanting medieval atmosphere after day tourists leave.",
+    "Sam Sand Dunes can be touristy; if you prefer untouched serene desert dunes with zero commercial noise, visit the nearby Khuri Dunes instead.",
+    "Wear warm layers for desert night safaris; desert temperatures can plunge from 28°C during the day to 8°C after sunset in winter."
+  ]
+},
+
+  barcelona: {
+  "destination": "Barcelona",
+  "country": "Spain",
+  "tagline": "The Mediterranean jewel of Antoni Gaudí's surreal modernist architecture, Gothic alleyways, and sun-soaked tapas beaches.",
+  "bestTimeToVisit": "May to June and September to October for warm sunny beach weather without sweltering midsummer crowds.",
+  "dailyBudgetUSD": 95,
+  "topAttractions": [
+    {
+      "name": "La Sagrada Família (UNESCO)",
+      "fee": "€26 / €36 (with Towers)",
+      "insiderTip": "Book tickets online at least 3 weeks ahead; visit in the late afternoon (3:30 PM - 5:30 PM) when sunlight streams through the stained glass in radiant amber and orange."
+    },
+    {
+      "name": "Park Güell Monumental Zone",
+      "fee": "€10",
+      "insiderTip": "Gaudí's fairytale park; sit on the undulating serpentine mosaic bench for views of the colorful salamander (El Drac) and the Barcelona skyline."
+    },
+    {
+      "name": "Casa Batlló & Casa Milà (La Pedrera)",
+      "fee": "€29 - €35",
+      "insiderTip": "Gaudí's masterpiece inspired by marine life and the legend of Saint George; walk on the warrior chimney rooftop terrace."
+    },
+    {
+      "name": "Gothic Quarter (Barri Gòtic) & Las Ramblas",
+      "fee": "Free / €9 Cathedral",
+      "insiderTip": "Explore medieval alleys dating to Roman times, visit the Cathedral of Barcelona cloisters with 13 white geese, and browse Boqueria Market."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Gaudí's Wonders: Sagrada Família, Passeig de Gràcia & Tapas",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "La Sagrada Família Basilica & Towers Climb",
+          "description": "Stand beneath tree-like stone columns reaching toward organic vaulted ceilings; take the elevator up the Nativity Tower.",
+          "cost": "€36"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Passeig de Gràcia: Casa Batlló & Casa Milà",
+          "description": "Admire Gaudí's bone-like balconies, iridescent dragon-back roof, and undulating limestone facade on Barcelona's grand boulevard.",
+          "cost": "€29"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Park Güell Golden Hour Mosaic Terrace",
+          "description": "Walk through the Greek stone columns and photograph panoramic vistas over Barcelona to the Mediterranean Sea.",
+          "cost": "€10"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Tapas Food Trail in El Born & Sangria",
+          "description": "Feast on Patatas Bravas, Jamón Ibérico bellota, Pan con Tomate, and Gambas al Ajillo with chilled red wine sangria.",
+          "cost": "€32"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Gothic Quarter, Boqueria Market & Barceloneta Beach",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Gothic Quarter (Barri Gòtic) & Barcelona Cathedral",
+          "description": "Stroll medieval stone lanes, view the Bishop's Bridge, and visit Plaça del Rei where Columbus was received by the monarchs.",
+          "cost": "€9"
+        },
+        {
+          "period": "Afternoon (13:00 - 15:30)",
+          "activity": "Mercat de la Boqueria Food Market Tasting",
+          "description": "Sample freshly pressed tropical dragon fruit juices, cones of cured Manchego cheese, and grilled seafood at El Quim bar.",
+          "cost": "€15"
+        },
+        {
+          "period": "Evening (16:00 - 19:30)",
+          "activity": "Barceloneta Beach Sunset Walk & W Hotel Lookout",
+          "description": "Walk the palm-fringed seaside boardwalk, watch beach volleyball, and enjoy the Mediterranean breeze.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Authentic Seafood Paella by the Port",
+          "description": "Dine on traditional saffron-infused Paella de Marisco with mussels, prawns, and squid in a seaside tavern.",
+          "cost": "€28"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "€40 - €55 / day (hostel in Gràcia/Eixample + T-casual 10-ride metro pass + tapas bakeries)",
+    "midRange": "€110 - €175 / day (3-star boutique hotel + Gaudí entry tickets + sit-down paella meals)",
+    "luxury": "€390+ / day (Hotel Arts Barcelona or W Barcelona overlooking the Mediterranean beach)"
+  },
+  "localTips": [
+    "Purchase a T-casual metro card (10 rides for ~€12.15); it is significantly cheaper than buying single tickets.",
+    "Beware of pickpockets along Las Ramblas, Plaça Catalunya, and crowded metro stations; keep valuables in zipped front pockets.",
+    "Locals in Barcelona dine late: lunch is typically 2:00 PM - 3:30 PM, and dinner rarely starts before 8:30 PM or 9:00 PM."
+  ]
+},
+
+  amsterdam: {
+  "destination": "Amsterdam",
+  "country": "Netherlands",
+  "tagline": "The Venice of the North: picturesque 17th-century canal rings, world-class art museums, bicycle culture, and cozy brown cafes.",
+  "bestTimeToVisit": "April to May for blooming Keukenhof tulip fields and September to November for scenic golden canal foliage.",
+  "dailyBudgetUSD": 110,
+  "topAttractions": [
+    {
+      "name": "Rijksmuseum & Rembrandt's The Night Watch",
+      "fee": "€22.50",
+      "insiderTip": "Book time slots online; admire Vermeer's The Milkmaid and the breathtaking multi-story Cuypers Library."
+    },
+    {
+      "name": "Van Gogh Museum",
+      "fee": "€22",
+      "insiderTip": "Houses the world's largest collection of Vincent van Gogh's paintings, including Sunflowers and Almond Blossoms; tickets sell out weeks ahead."
+    },
+    {
+      "name": "17th-Century UNESCO Canal Ring Cruise",
+      "fee": "€18 - €25",
+      "insiderTip": "Take an open-top electric boat tour from Prinsengracht at dusk to see the bridges illuminated with thousands of fairy lights."
+    },
+    {
+      "name": "Anne Frank House (Prinsengracht)",
+      "fee": "€16",
+      "insiderTip": "Tickets are released strictly on the official website every Tuesday at 10:00 AM CET for visits 6 weeks in advance."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Museumplein Masterpieces, Vondelpark & Canal Cruise",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Rijksmuseum & Van Gogh Museum Exploration",
+          "description": "Stand before Rembrandt's monumental Night Watch, admire Van Gogh's vibrant post-impressionist brushstrokes, and explore Dutch Golden Age art.",
+          "cost": "€44"
+        },
+        {
+          "period": "Afternoon (13:00 - 15:30)",
+          "activity": "Vondelpark Bicycle Ride & Artisanal Herring Tasting",
+          "description": "Rent a classic Dutch bicycle to cruise under weeping willows, then taste traditional raw herring with onions and pickles at a haringhandel.",
+          "cost": "€15"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Sunset Electric Canal Cruise on Prinsengracht",
+          "description": "Glide under the historic Seven Bridges as dusk colors reflect on the water, with Dutch cheese and wine on board.",
+          "cost": "€22"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Cozy Brown Cafe (Bruin Cafe) & Dutch Bitterballen",
+          "description": "Relax in a 200-year-old wood-paneled pub enjoying crispy deep-fried meat croquettes (bitterballen) with mustard and local craft beer.",
+          "cost": "€25"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Jordaan Quarter, Anne Frank House & Albert Cuyp Market",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:00)",
+          "activity": "Anne Frank House & Westerkerk Tower",
+          "description": "Walk through the secret annex hidden behind a movable bookcase, then view the 85-meter Westerkerk church spire.",
+          "cost": "€16"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Jordaan Historic Quarter Walk & Apple Pie at Winkel 43",
+          "description": "Wander tranquil flower-draped residential canals, quirky art galleries, and taste Amsterdam's best warm apple pie with whipped cream.",
+          "cost": "€10"
+        },
+        {
+          "period": "Evening (16:00 - 19:00)",
+          "activity": "Albert Cuyp Market & Fresh Warm Stroopwafel",
+          "description": "Europe's largest outdoor street market; watch fresh caramel syrup sandwiched between freshly pressed hot waffle wafers.",
+          "cost": "€8"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Indonesian Rijsttafel Feast at Restaurant Blauw",
+          "description": "Experience the colonial Dutch-Indonesian tradition of 'Rice Table' featuring 15 small tasting dishes including beef rendang and satay.",
+          "cost": "€38"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "€45 - €65 / day (hostel outside center + rented bicycle €12 + supermarket sandwiches)",
+    "midRange": "€125 - €195 / day (canal-view boutique hotel + museum cards + Dutch dining)",
+    "luxury": "€450+ / day (Waldorf Astoria Amsterdam or Conservatorium Hotel + private salon boat tours)"
+  },
+  "localTips": [
+    "Always look both ways before stepping across red bicycle lanes; cyclists have absolute right of way and ride fast!",
+    "Most museums and public transport in Amsterdam are 100% CASHLESS; carry a debit/credit card with contactless chip.",
+    "Rent a bicycle to explore like a local; Amsterdam has over 500 km of dedicated protected cycling paths."
+  ]
+},
+
+  bangkok: {
+  "destination": "Bangkok",
+  "country": "Thailand",
+  "tagline": "The vibrant City of Angels: gleaming golden Buddhist temples, bustling canal longtail boats, world-famous street food, and rooftop skylines.",
+  "bestTimeToVisit": "November to February during the dry, cooler season.",
+  "dailyBudgetUSD": 40,
+  "topAttractions": [
+    {
+      "name": "The Grand Palace & Wat Phra Kaew (Emerald Buddha)",
+      "fee": "500 THB (~$14)",
+      "insiderTip": "Strict dress code: shoulders and ankles must be covered (no leggings or torn jeans); enter by 08:30 AM to beat tour groups."
+    },
+    {
+      "name": "Wat Arun (Temple of Dawn)",
+      "fee": "100 THB (~$3)",
+      "insiderTip": "Perched on the Chao Phraya River; climb the steep porcelain mosaic spire at sunset when the temple is illuminated in radiant amber."
+    },
+    {
+      "name": "Wat Pho (Temple of the Reclining Buddha)",
+      "fee": "200 THB (~$6)",
+      "insiderTip": "Houses the 46-meter gold-leaf reclining Buddha with mother-of-pearl feet; get an authentic traditional massage at Thailand's premier massage school."
+    },
+    {
+      "name": "Chatuchak Weekend Market",
+      "fee": "Free",
+      "insiderTip": "One of the world's largest weekend markets with 15,000 stalls; browse spices, ceramics, silk, and sample coconut ice cream."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Royal Bangkok: Grand Palace, Reclining Buddha & Wat Arun",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:00)",
+          "activity": "The Grand Palace & Temple of the Emerald Buddha",
+          "description": "Stand in awe before glittering golden chedis, mythical yaksha guardians, and the sacred jade-carved Emerald Buddha.",
+          "cost": "500 THB"
+        },
+        {
+          "period": "Afternoon (12:30 - 15:30)",
+          "activity": "Wat Pho & Traditional Thai Massage",
+          "description": "Marvel at the giant 46-meter reclining Buddha, followed by a soothing 1-hour traditional acupressure massage.",
+          "cost": "460 THB"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "Cross River Ferry to Wat Arun at Sunset",
+          "description": "Take the 5 THB public cross-river ferry to admire sunset views over the illuminated porcelain mosaic pagoda.",
+          "cost": "105 THB"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Yaowarat Chinatown Street Food Night Walk",
+          "description": "Feast on crispy oyster omelets, Michelin-recommended Guay Tiew Kway Chap rolled noodles, and mango sticky rice under neon signs.",
+          "cost": "250 THB"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Chao Phraya Express, Jim Thompson House & Rooftop Views",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:00)",
+          "activity": "Chao Phraya River Express Boat & Flower Market (Pak Khlong Talat)",
+          "description": "Cruise on the public orange flag boat to the 24-hour wholesale flower market filled with fragrant jasmine and orchid garlands.",
+          "cost": "30 THB"
+        },
+        {
+          "period": "Afternoon (12:30 - 16:00)",
+          "activity": "Jim Thompson House & Teakwood Museum",
+          "description": "Explore the traditional Thai teakwood mansion surrounded by tropical jungle gardens, showcasing Asian antiquities and silk.",
+          "cost": "200 THB"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "IconSiam Waterfront Promenade & Fountain Show",
+          "description": "Explore the indoor floating market (SookSiam) inside the luxury mall and watch the sunset over the river.",
+          "cost": "Free"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Open-Air Skyline Dining at Octave or Sky Bar",
+          "description": "Sip signature cocktails perched 45 stories high with 360-degree night views of the glowing Bangkok metropolis.",
+          "cost": "550 THB"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "600 - 900 THB / day (~$18 - $25, clean hostel dorm + BTS Skytrain + street Pad Thai 60 THB)",
+    "midRange": "1,800 - 3,200 THB / day (~$50 - $90, river-view hotel + tuk-tuk rides + sit-down seafood)",
+    "luxury": "8,000+ THB / day (~$230+, Mandarin Oriental Bangkok or The Peninsula with private river boat)"
+  },
+  "localTips": [
+    "Use the BTS Skytrain and MRT subway to avoid notorious Bangkok street traffic jams.",
+    "Always ensure taxi drivers turn on the meter ('Meter please'); if they refuse, politely exit and find another cab.",
+    "Beware of friendly strangers near the Grand Palace claiming 'the palace is closed today for a Buddhist holiday'; this is a classic gem-shop scam."
+  ]
+},
+
+  maldives: {
+  "destination": "Maldives",
+  "country": "Maldives",
+  "tagline": "The Ultimate Tropical Atoll Sanctuary: overwater bungalows perched over turquoise lagoons, vibrant manta ray reefs, and pristine white sands.",
+  "bestTimeToVisit": "November to April during the dry northeast monsoon for glass-calm seas and crystal underwater visibility.",
+  "dailyBudgetUSD": 140,
+  "topAttractions": [
+    {
+      "name": "Overwater Villa Experience & House Reef Snorkeling",
+      "fee": "Included in Resort",
+      "insiderTip": "Step directly down your private villa wooden ladder into a calm coral lagoon teeming with baby blacktip reef sharks and blue tangs."
+    },
+    {
+      "name": "Manta Ray & Whale Shark Safari (South Ari Atoll)",
+      "fee": "$90 - $140 / tour",
+      "insiderTip": "Snorkel alongside gentle 15-foot ocean manta rays gliding through cleaning stations and feeding on plankton."
+    },
+    {
+      "name": "Maafushi Local Island Coral & Sandbank Tour",
+      "fee": "$35 - $50 (Speedboat tour)",
+      "insiderTip": "The best budget-friendly base in the Maldives; includes sandbank lunch on pure white sand spits surrounded by 360-degree turquoise ocean."
+    },
+    {
+      "name": "Bioluminescent Beach Glow (Vaadhoo Island)",
+      "fee": "Free",
+      "insiderTip": "Witness glowing blue ostracod crustaceans wash up on the dark shoreline like twinkling stars under night skies."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Arrival in Paradise: Speedboat Transfer & House Reef",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Speedboat Transfer from Malé to Coral Island",
+          "description": "Speed across the shimmering turquoise Indian Ocean to your palm-fringed coral atoll surrounded by powdery white sands.",
+          "cost": "$40"
+        },
+        {
+          "period": "Afternoon (13:30 - 16:30)",
+          "activity": "Lagoon Swimming & Coral Reef Snorkeling",
+          "description": "Don a snorkel mask to explore live brain corals, anemone clownfish, and sea turtles swimming right off the beach.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (17:30 - 19:30)",
+          "activity": "Sunset Dolphin Cruise on Traditional Wooden Dhoni",
+          "description": "Sail into the golden sunset while pods of wild spinner dolphins jump and perform acrobatic spins alongside the boat bow.",
+          "cost": "$45"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Candlelit Beach BBQ & Grilled Catch-of-the-Day",
+          "description": "Feast with your toes in the sand on grilled reef fish, lobster, coconut sambal, and fresh tropical fruit platters.",
+          "cost": "$55"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Manta Ray Safari, Sandbank Picnic & Stargazing",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:30)",
+          "activity": "Guided Manta Ray & Sea Turtle Snorkel Safari",
+          "description": "Jump into open atoll channels to snorkel alongside graceful manta rays gliding like underwater eagles.",
+          "cost": "$85"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:00)",
+          "activity": "Castaway Sandbank Picnic in the Middle of the Ocean",
+          "description": "Disembark onto an isolated sand spit in the middle of azure waters for chilled coconut water, fresh fruit, and photography.",
+          "cost": "Included"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Overwater Hammock Sunset & Kayaking",
+          "description": "Paddle a transparent glass-bottom kayak across calm crystalline waters as twilight turns the lagoon violet.",
+          "cost": "$20"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Bioluminescent Beach Walk under Starry Skies",
+          "description": "Walk along the wet sand at night watching magical bioluminescent blue plankton sparkle with every footstep.",
+          "cost": "Free"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "$60 - $95 / day (local island guesthouse on Maafushi/Fulidhoo + public ferry + local island cafes)",
+    "midRange": "$220 - $400 / day (beachfront 4-star boutique resort + private speedboat transfers + daily snorkeling)",
+    "luxury": "$1,200+ / day (5-star private island overwater pool villa at Soneva Fushi or Gili Lankanfushi)"
+  },
+  "localTips": [
+    "Traveling on local inhabited islands (like Maafushi, Thulusdhoo, or Dhigurah) is up to 80% cheaper than private luxury resort islands.",
+    "On local islands, respect Islamic local customs: alcohol is not served, and swimming in bikinis is restricted to designated 'Bikini Beaches'.",
+    "Public government MTCC ferries run between Malé and local islands for only $2 - $4, compared to $40+ for speedboats."
+  ]
+},
+
+  kolkata: {
+  "destination": "Kolkata",
+  "country": "India",
+  "tagline": "The City of Joy: colonial grand marble palaces, yellow ambassador cabs, intellectual adda cafes, and historic street food.",
+  "bestTimeToVisit": "October to March for cool pleasant weather and the vibrant spectacle of Durga Puja.",
+  "dailyBudgetUSD": 35,
+  "topAttractions": [
+    {
+      "name": "Victoria Memorial & Maidan Grounds",
+      "fee": "₹50 (Indians) / ₹500 (Foreigners)",
+      "insiderTip": "Pristine white Makrana marble monument dedicated to Queen Victoria; stroll through 64 acres of landscaped gardens at sunrise."
+    },
+    {
+      "name": "Howrah Bridge & Flower Market (Mullick Ghat)",
+      "fee": "Free",
+      "insiderTip": "Visit Mullick Ghat under the bridge at 06:00 AM; witness thousands of flower sellers with marigolds and lotus garlands beside the Hooghly River."
+    },
+    {
+      "name": "Dakshineswar & Belur Math Ferry Ride",
+      "fee": "Free (Ferry ₹11)",
+      "insiderTip": "Take the wooden public ferry across the Hooghly River from the 12-spired Kali temple to the headquarters of the Ramakrishna Mission."
+    },
+    {
+      "name": "Princep Ghat & Traditional Wooden Boat Ride",
+      "fee": "Free / Boat ₹300",
+      "insiderTip": "Perched under the Vidyasagar Setu suspension bridge; hire a traditional wooden country boat at dusk for sunset reflections."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Colonial Grandeur: Victoria Memorial & Princep Ghat Sunset",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:30)",
+          "activity": "Victoria Memorial & St. Paul's Cathedral",
+          "description": "Explore the royal gallery, British imperial oil paintings, and walk to the Gothic Anglican cathedral with stained-glass rose windows.",
+          "cost": "₹70"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:00)",
+          "activity": "Park Street Heritage Dining at Peter Cat / Mocambo",
+          "description": "Feast on iconic Chelo Kebabs (buttered rice, fried egg, seekh kebabs) or Chicken Tetrazzini in a classic 1970s heritage restaurant.",
+          "cost": "₹550"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Princep Ghat River Promenade & Wooden Country Boat Ride",
+          "description": "Stroll along the Palladian Greek porch monument, followed by a gentle twilight boat ride under the illuminated suspension bridge.",
+          "cost": "₹300"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Kolkata Kathi Roll & Rosogolla Food Trail",
+          "description": "Taste original egg-chicken kathi rolls at Nizam's (Est. 1932) on New Market, followed by warm sponge Rosogolla at K.C. Das.",
+          "cost": "₹250"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Spiritual Hooghly: Howrah Bridge, Dakshineswar & College Street",
+      "slots": [
+        {
+          "period": "Morning (06:00 - 10:30)",
+          "activity": "Mullick Ghat Flower Market & Walking Howrah Bridge",
+          "description": "Walk across the cantilever marvel without a single nut or bolt, photographing mountain-high sacks of orange marigolds.",
+          "cost": "Free"
+        },
+        {
+          "period": "Afternoon (11:30 - 15:30)",
+          "activity": "Dakshineswar Kali Temple & Belur Math River Ferry",
+          "description": "Visit Sri Ramakrishna's sacred temple on the riverbank, then cruise across to Belur Math's universal architectural temple.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "College Street 'Boi Para' & Indian Coffee House (Est. 1942)",
+          "description": "Browse the world's largest second-hand book market spanning 1.5 km, then sip infused black coffee amidst intellectual debates.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Traditional Bengali Feast at 6 Ballygunge Place / Oh! Calcutta",
+          "description": "Savor Daab Chingri (prawns cooked in tender coconut shell), Kosha Mangsho (slow-cooked mutton), and Mishti Doi.",
+          "cost": "₹700"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,000 - ₹1,600 / day (budget Sudder Street hotels + Kolkata Metro ₹10 + street kathi rolls ₹60)",
+    "midRange": "₹3,200 - ₹5,500 / day (heritage mansion boutique hotel + yellow ambassador cabs + dining)",
+    "luxury": "₹18,000+ / day (The Oberoi Grand on Jawaharlal Nehru Road or ITC Royal Bengal)"
+  },
+  "localTips": [
+    "The Kolkata Metro is India's first underground railway; use it to travel effortlessly between North and South Kolkata.",
+    "Never miss an 'Adda' (informal intellectual conversation) at Indian Coffee House on College Street to feel the true pulse of the city.",
+    "Traditional hand-pulled rickshaws still operate in North Kolkata alleys; agree on a fair fare before boarding."
+  ]
+},
+
+  hyderabad: {
+  "destination": "Hyderabad",
+  "country": "India",
+  "tagline": "The City of Pearls and Nizams: historic 16th-century minarets, massive granite fortresses, and world-renowned Dum Biryani.",
+  "bestTimeToVisit": "October to March for cool pleasant days and comfortable sightseeing.",
+  "dailyBudgetUSD": 38,
+  "topAttractions": [
+    {
+      "name": "Charminar & Laad Bazaar (Choodi Bazaar)",
+      "fee": "₹25 / ₹300 (Intl)",
+      "insiderTip": "Climb the spiral staircase of the 1591 landmark for views of Mecca Masjid, then shop for lacquer and stone bangles in Laad Bazaar."
+    },
+    {
+      "name": "Golconda Fort & Sound & Light Show",
+      "fee": "₹25 (Fort) + ₹140 (Show)",
+      "insiderTip": "Test the acoustic marvel: a single clap at the entrance dome (Fateh Darwaza) can be heard clearly at the Bala Hissar pavilion 1 km away."
+    },
+    {
+      "name": "Salar Jung Museum (3rd Largest in India)",
+      "fee": "₹50 / ₹500",
+      "insiderTip": "Houses 43,000 art objects; gather in the central courtyard at 12:00 PM noon to see the mechanical 19th-century musical clock chime."
+    },
+    {
+      "name": "Ramoji Film City (World's Largest Film Studio)",
+      "fee": "₹1,350",
+      "insiderTip": "Guinness World Record certified covering 2,000 acres; take the vintage bus tour through Baahubali sets, mock airports, and railway stations."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Nizam Heritage: Charminar, Chowmahalla Palace & Biryani",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Charminar & Mecca Masjid Heritage Walk",
+          "description": "Admire four 48-meter minarets, visit one of India's oldest mosques built with soil brought from Mecca, and sip hot Irani Chai.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Chowmahalla Palace of the Asaf Jahi Dynasty",
+          "description": "Walk through the Durbar Hall (Khilwat Mubarak) beneath 19 colossal Belgian crystal chandeliers and see vintage royal Rolls-Royces.",
+          "cost": "₹100"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Laad Bazaar Pearl Shopping & Nimrah Cafe Osmania Biscuits",
+          "description": "Shop for Basra pearls and glass bangles, while dipping salty-sweet Osmania biscuits into creamy Irani chai.",
+          "cost": "₹200"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Authentic Hyderabadi Dum Biryani at Shadab / Bawarchi",
+          "description": "Feast on fragrant slow-cooked mutton Dum Biryani cooked in sealed handi with Mirchi ka Salan and Dahi Chutney.",
+          "cost": "₹450"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Golconda Fortress, Qutb Shahi Tombs & Hussain Sagar",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 12:30)",
+          "activity": "Golconda Fort Acoustic Citadel Exploration",
+          "description": "Hike up the stone ramparts past royal palaces, diamond vaults (Koh-i-Noor origin), and enjoy panoramic views of the modern skyline.",
+          "cost": "₹25"
+        },
+        {
+          "period": "Afternoon (13:00 - 15:30)",
+          "activity": "Qutb Shahi Tombs (Ibrahim Bagh Necropolis)",
+          "description": "Marvel at domed granite and stucco tombs blending Persian, Pathan, and Hindu architectural styles.",
+          "cost": "₹50"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Hussain Sagar Lake Boat Ride to Monolithic Buddha Statue",
+          "description": "Cruise to the center of the lake to stand beneath the world's tallest 18-meter monolithic granite statue of Gautama Buddha.",
+          "cost": "₹120"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Nightlife at Jubilee Hills & Royal Haleem Tasting",
+          "description": "Sample slow-cooked meat and lentil Haleem with fried cashews and mint, followed by modern craft dining.",
+          "cost": "₹500"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "₹1,200 - ₹1,800 / day (budget stays near Nampally + Hyderabad Metro ₹20 + street biryani ₹180)",
+    "midRange": "₹3,500 - ₹5,500 / day (3-star Banjara Hills hotel + Uber cabs + palace dining)",
+    "luxury": "₹28,000+ / day (Taj Falaknuma Palace - luxury palace perched 2,000 ft above the city with horse-drawn carriage arrival)"
+  },
+  "localTips": [
+    "Order 'Single Biryani' if dining alone or with a partner; a standard Hyderabadi biryani portion is easily enough for two hungry people.",
+    "Pair Irani Chai with Osmania Biscuits or bun maska at Nimrah Cafe right next to Charminar for the quintessential local breakfast.",
+    "Carry good walking shoes for Golconda Fort; ascending to the summit Bala Hissar involves climbing over 360 steep stone steps."
+  ]
+},
+
+  sydney: {
+  "destination": "Sydney",
+  "country": "Australia",
+  "tagline": "The Emerald Harbour City: the sail-shaped Opera House, dramatic Pacific coastal clifftops, surf beaches, and sunny outdoor dining.",
+  "bestTimeToVisit": "September to November and March to May for warm sunny weather and fewer beach crowds.",
+  "dailyBudgetUSD": 125,
+  "topAttractions": [
+    {
+      "name": "Sydney Opera House (UNESCO)",
+      "fee": "AUD $45 (Inside Tour) / Exterior Free",
+      "insiderTip": "Take the 1-hour architectural tour to see the acoustic ceramic sails and concert halls; enjoy a sunset drink at the outdoor Opera Bar."
+    },
+    {
+      "name": "Sydney Harbour Bridge Climb or Pylon Lookout",
+      "fee": "AUD $250+ (BridgeClimb) / AUD $24 (Pylon)",
+      "insiderTip": "Climb the 200 stone steps to the Pylon Lookout for the exact same harbor panoramas as the expensive bridge climb for a fraction of the cost."
+    },
+    {
+      "name": "Bondi to Coogee Coastal Walk (6 km)",
+      "fee": "Free",
+      "insiderTip": "Walk the clifftop ocean path past crashing Pacific waves, sculpted sandstone sea arches, and the famous ocean pool at Bondi Icebergs."
+    },
+    {
+      "name": "Manly Ferry from Circular Quay",
+      "fee": "AUD $8.50 (Opal / Contactless)",
+      "insiderTip": "The best cheap harbor cruise in the world: a 30-minute public ferry ride past the Opera House and Harbour heads to the laid-back surf beach of Manly."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Iconic Harbour: Opera House, The Rocks & Botanical Gardens",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Sydney Opera House & Royal Botanic Garden Walk",
+          "description": "Photograph the white ceramic sails up close, then walk along the harbor foreshore to Mrs Macquarie's Chair for the postcard view.",
+          "cost": "Free"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "The Rocks Historic Quarter & Harbour Bridge Walkway",
+          "description": "Explore Sydney's oldest convict settlement, cobblestone alleyways, and walk across the pedestrian span of the giant steel coat hanger.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Circular Quay Sunset Drinks at Opera Bar",
+          "description": "Perch by the harbor water sipping chilled Australian wine while watching ferries glide beneath the illuminated Harbour Bridge.",
+          "cost": "AUD $28"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Aussie Seafood Feast at Darling Harbour",
+          "description": "Feast on grilled Barramundi, Sydney rock oysters, and tiger prawns along the bustling waterfront promenade.",
+          "cost": "AUD $55"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Bondi Beach & Coastal Cliffs to Coogee",
+      "slots": [
+        {
+          "period": "Morning (08:30 - 11:30)",
+          "activity": "Bondi Beach Surf & Bondi Icebergs Pool",
+          "description": "Watch surfers ride rolling ocean breaks, swim in the famous saltwater ocean pool filled by crashing waves, and grab an acai bowl.",
+          "cost": "AUD $10"
+        },
+        {
+          "period": "Afternoon (12:00 - 15:30)",
+          "activity": "Bondi to Bronte Clifftop Coastal Walk",
+          "description": "Trek the dramatic ocean sandstone cliffs past Tamarama Beach, natural rock pools, and coastal parks with ocean breeze.",
+          "cost": "Free"
+        },
+        {
+          "period": "Evening (16:30 - 19:30)",
+          "activity": "Manly Ferry Twilight Cruise to Manly Beach",
+          "description": "Take the classic green and yellow public ferry across Sydney Harbour as city skyscrapers ignite with evening lights.",
+          "cost": "AUD $9"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Fish and Chips on Manly Beach Corso",
+          "description": "Enjoy fresh crispy beer-battered flathead and chips with tartare sauce listening to the Pacific surf.",
+          "cost": "AUD $22"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "AUD $55 - $80 / day (~$38 - $55, hostel in Haymarket + Opal card daily cap + supermarket meat pies)",
+    "midRange": "AUD $160 - $260 / day (~$110 - $175, boutique hotel near Circular Quay + ferries + sit-down meals)",
+    "luxury": "AUD $550+ / day (~$370+, Park Hyatt Sydney with direct Opera House views or Crown Sydney)"
+  },
+  "localTips": [
+    "Simply tap your contactless bank card or smartphone on all Sydney trains, buses, and ferries; fare caps apply automatically.",
+    "Sunday is the best day for long ferry trips: Opal travel offers significantly discounted fare caps across the entire network.",
+    "Always swim between the red and yellow flags on Australian beaches; lifesavers monitor only these safe patrolled zones."
+  ]
+},
+
+  cairo: {
+  "destination": "Cairo & Giza",
+  "country": "Egypt",
+  "tagline": "The Cradle of Civilization: the 4,500-year-old Great Pyramids of Giza, mysterious Sphinx, and bustling Khan el-Khalili bazaar.",
+  "bestTimeToVisit": "October to April for pleasant mild desert temperatures.",
+  "dailyBudgetUSD": 42,
+  "topAttractions": [
+    {
+      "name": "The Great Pyramids of Giza & The Great Sphinx",
+      "fee": "EGP 540 (~$11)",
+      "insiderTip": "The last surviving Wonder of the Ancient World; enter the Giza Plateau at 08:00 AM right at opening to avoid tour bus crowds and mid-day heat."
+    },
+    {
+      "name": "The Grand Egyptian Museum (GEM) / Museum of Antiquities",
+      "fee": "EGP 450 (~$9)",
+      "insiderTip": "Houses the complete Tutankhamun golden treasure collection, including the iconic 24-pound solid gold funerary mask."
+    },
+    {
+      "name": "Khan el-Khalili Medieval Bazaar",
+      "fee": "Free",
+      "insiderTip": "Active since the 14th century; browse brass lanterns, fragrant frankincense, spices, and sip mint tea at El Fishawy cafe (open since 1773)."
+    },
+    {
+      "name": "Nile River Sunset Felucca Sailboat Ride",
+      "fee": "EGP 400 - EGP 600 / boat",
+      "insiderTip": "Hire a private traditional white-canvas wooden sailboat at Zamalek for a peaceful 1-hour cruise as dusk settles over Cairo."
+    }
+  ],
+  "days": [
+    {
+      "dayNumber": 1,
+      "dayTitle": "Ancient Marvels: The Great Pyramids of Giza & The Sphinx",
+      "slots": [
+        {
+          "period": "Morning (08:00 - 12:30)",
+          "activity": "Great Pyramid of Khufu, Khafre & Menkaure",
+          "description": "Stand in awe before millions of limestone blocks built in 2500 BC; optional climb inside the Grand Gallery to the King's Chamber.",
+          "cost": "EGP 540"
+        },
+        {
+          "period": "Afternoon (13:00 - 15:30)",
+          "activity": "The Great Sphinx & Valley Temple of Khafre",
+          "description": "Walk down to the colossal mythical lion with the head of a Pharaoh carved out of a single limestone ridge.",
+          "cost": "Included"
+        },
+        {
+          "period": "Evening (16:30 - 19:00)",
+          "activity": "Sunset Camel Ride Across the Giza Desert Plateau",
+          "description": "Ride camels across golden desert dunes to the panoramic lookout where all nine Giza pyramids line up against the setting sun.",
+          "cost": "EGP 400"
+        },
+        {
+          "period": "Night (19:30+)",
+          "activity": "Traditional Egyptian Feast: Koshary & Mixed Grill",
+          "description": "Taste Koshary (rice, lentils, macaroni topped with spiced tomato sauce and crispy fried onions) at Abou Tarek, followed by Mahshi.",
+          "cost": "EGP 200"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "dayTitle": "Islamic Cairo: Citadel of Saladin & Khan el-Khalili Bazaar",
+      "slots": [
+        {
+          "period": "Morning (09:00 - 12:30)",
+          "activity": "Citadel of Saladin & Mosque of Muhammad Ali",
+          "description": "Explore the medieval fortress offering commanding vistas of Cairo, and step into the Alabaster Mosque with hanging brass lanterns.",
+          "cost": "EGP 450"
+        },
+        {
+          "period": "Afternoon (13:00 - 16:30)",
+          "activity": "Egyptian Museum at Tahrir Square (Tutankhamun Treasures)",
+          "description": "Marvel at ancient pharaonic sarcophagi, royal mummies, papyrus scrolls, and ancient jewelry.",
+          "cost": "EGP 450"
+        },
+        {
+          "period": "Evening (17:00 - 19:30)",
+          "activity": "Khan el-Khalili Bazaar & El Fishawy Heritage Cafe",
+          "description": "Haggle for hand-hammered copper trays, alabaster statues, and sip hot hibiscus (Karkadeh) tea with shisha in the historic cafe.",
+          "cost": "EGP 150"
+        },
+        {
+          "period": "Night (20:00+)",
+          "activity": "Traditional Nile Sunset Felucca Sail & Stargazing",
+          "description": "Glide along the world's longest river on a peaceful wooden sailboat as Cairo city lights twinkle across the water.",
+          "cost": "EGP 500"
+        }
+      ]
+    }
+  ],
+  "budgetTiers": {
+    "backpacker": "EGP 800 - 1,200 / day (~$16 - $25, Downtown Cairo hostel + metro + local Koshary EGP 40)",
+    "midRange": "EGP 2,500 - 4,500 / day (~$50 - $90, 4-star Nile-view hotel + private AC car & driver + entry tickets)",
+    "luxury": "EGP 15,000+ / day (~$300+, Marriott Mena House with direct views of the Pyramids from your private balcony)"
+  },
+  "localTips": [
+    "Use Uber in Cairo rather than hailing street cabs; it eliminates haggling over fares and is very inexpensive and reliable.",
+    "Beware of aggressive camel and horse handlers at the Pyramids; agree firmly on the total price (including tip) before mounting.",
+    "Carry small Egyptian Pound banknotes for tipping ('Baksheesh'), which is an integral part of Egyptian service culture."
+  ]
+},
 };

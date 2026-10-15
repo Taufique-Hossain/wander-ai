@@ -34,7 +34,27 @@ const DESTINATION_ALIASES = {
   switzerland: ['switzerland', 'swiss', 'interlaken', 'lucerne', 'zurich', 'jungfrau', 'lauterbrunnen', 'grindelwald', 'zermatt'],
   singapore: ['singapore', 'gardens by the bay', 'marina bay', 'changi', 'sentosa'],
   varanasi: ['varanasi', 'banaras', 'kashi', 'ganga aarti', 'sarnath', 'assi ghat', 'dashashwamedh'],
-  shimla: ['shimla', 'kufri', 'the ridge', 'jakhu', 'viceregal lodge', 'chail']
+  shimla: ['shimla', 'kufri', 'the ridge', 'jakhu', 'viceregal lodge', 'chail'],
+  andaman: ['andaman', 'nicobar', 'havelock', 'swaraj dweep', 'port blair', 'radhanagar', 'neil island', 'elephant beach', 'cellular jail'],
+  udaipur: ['udaipur', 'pichola', 'lake pichola', 'city palace udaipur', 'jag mandir', 'fateh sagar', 'monsoon palace', 'sajjangarh', 'bagore ki haveli'],
+  rishikesh: ['rishikesh', 'haridwar', 'laxman jhula', 'ram jhula', 'beatles ashram', 'triveni ghat', 'har ki pauri', 'ganga aarti rishikesh'],
+  meghalaya: ['meghalaya', 'shillong', 'cherrapunji', 'sohra', 'dawki', 'living root bridge', 'nongriat', 'nohkalikai', 'mawlynnong', 'umiam'],
+  amritsar: ['amritsar', 'golden temple', 'harmandir sahib', 'wagah', 'wagah border', 'jallianwala bagh', 'punjab'],
+  ooty: ['ooty', 'udagamandalam', 'coonoor', 'nilgiris', 'doddabetta', 'ooty lake', 'pykara', 'sims park'],
+  coorg: ['coorg', 'kodagu', 'madikeri', 'abbey falls', 'bylakuppe', 'golden temple coorg', 'dubare', 'rajas seat'],
+  hampi: ['hampi', 'vijayanagara', 'vittala', 'virupaksha', 'stone chariot', 'tungabhadra', 'anegundi', 'sanapur'],
+  mumbai: ['mumbai', 'bombay', 'marine drive', 'gateway of india', 'elephanta', 'bandra', 'colaba', 'juhu', 'csmt'],
+  delhi: ['delhi', 'new delhi', 'qutub minar', 'red fort', 'humayun tomb', 'chandni chowk', 'india gate', 'connaught place', 'old delhi'],
+  pondicherry: ['pondicherry', 'puducherry', 'pondy', 'white town', 'auroville', 'matrimandir', 'promenade beach', 'french quarter'],
+  jaisalmer: ['jaisalmer', 'golden fort', 'sonar qila', 'sam sand dunes', 'patwon ki haveli', 'gadisar', 'thar desert'],
+  barcelona: ['barcelona', 'sagrada familia', 'park guell', 'las ramblas', 'casa batllo', 'gothic quarter barcelona', 'spain'],
+  amsterdam: ['amsterdam', 'netherlands', 'holland', 'rijksmuseum', 'van gogh', 'anne frank', 'jordaan', 'canal cruise amsterdam'],
+  bangkok: ['bangkok', 'thailand', 'grand palace bangkok', 'wat arun', 'wat pho', 'chatuchak', 'khao san', 'yaowarat'],
+  maldives: ['maldives', 'male', 'maafushi', 'overwater villa', 'ari atoll', 'fulidhoo'],
+  kolkata: ['kolkata', 'calcutta', 'howrah bridge', 'victoria memorial', 'dakshineswar', 'belur math', 'princep ghat', 'park street kolkata'],
+  hyderabad: ['hyderabad', 'charminar', 'golconda', 'ramoji', 'hussain sagar', 'salar jung', 'secunderabad'],
+  sydney: ['sydney', 'australia', 'opera house', 'sydney harbour', 'bondi', 'bondi beach', 'manly ferry', 'coogee'],
+  cairo: ['cairo', 'giza', 'pyramids', 'great pyramid', 'sphinx', 'egypt', 'nile cruise', 'khan el khalili']
 };
 
 export function matchExpertDestination(query) {
@@ -46,9 +66,20 @@ export function matchExpertDestination(query) {
     return EXPERT_DESTINATIONS[norm];
   }
 
-  // 2. Alias matching
+  // 2. Exact alias match first
   for (const [destKey, aliases] of Object.entries(DESTINATION_ALIASES)) {
-    if (aliases.some(alias => norm === alias || norm.includes(alias) || alias.includes(norm))) {
+    if (aliases.some(alias => norm === alias)) {
+      return EXPERT_DESTINATIONS[destKey];
+    }
+  }
+
+  // 3. Whole-word boundary match (prevents "agra" from matching inside "sagrada")
+  for (const [destKey, aliases] of Object.entries(DESTINATION_ALIASES)) {
+    if (aliases.some(alias => {
+      const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(^|\\s|\\b)${escaped}(\\b|\\s|$)`, 'i');
+      return regex.test(norm) || (alias.length >= 6 && norm.includes(alias));
+    })) {
       return EXPERT_DESTINATIONS[destKey];
     }
   }
