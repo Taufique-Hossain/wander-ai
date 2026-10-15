@@ -102,7 +102,7 @@ export default function App() {
 
 
   // Filter destinations
-  const categories = ['All', 'Historical', 'Nature', 'Urban'];
+  const categories = ['All', 'Historical', 'Nature', 'Coastal', 'Spiritual', 'Urban'];
   const filteredDestinations = destinations.filter((dest) => {
     if (selectedCategory === 'All') return true;
     return dest.category === selectedCategory;
