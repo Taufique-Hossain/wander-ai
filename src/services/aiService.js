@@ -1,6 +1,6 @@
 /**
  * WanderAI Travel Intelligence Engine
- * Built for Firestorm Internet Travel Guide Architecture
+ * Intelligent Multi-Day Travel Guide Architecture
  * 
  * Features:
  * 1. Curated Real-World Intelligence for 20+ Global & Indian Destinations

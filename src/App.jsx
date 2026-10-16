@@ -306,7 +306,7 @@ export default function App() {
           </div>
 
           <p className="text-[11px]">
-            Engineered with React 19 & Tailwind CSS v4 • Built for Firestorm Travel Guides Network
+            Built with React 19 & Tailwind CSS v4 • Intelligent Multi-Day Travel Guides
           </p>
         </div>
       </footer>
