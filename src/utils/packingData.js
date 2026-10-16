@@ -142,31 +142,31 @@ export function getDestinationClimateProfile(destinationName = '', country = '',
 
   // Alpine / Himalayan matches
   const alpineKeywords = ['sikkim', 'gangtok', 'manali', 'ladakh', 'leh', 'kashmir', 'srinagar', 'gulmarg', 'shimla', 'darjeeling', 'switzerland', 'swiss', 'alps', 'kufri', 'solang', 'rohtang', 'nepal', 'everest'];
-  if (alpineKeywords.some(kw => normName.includes(kw))) {
+  if (alpineKeywords.some(kw => normName.includes(kw) || normCountry.includes(kw))) {
     return CLIMATE_PROFILES.ALPINE;
   }
 
   // Coastal / Tropical matches
   const coastalKeywords = ['goa', 'andaman', 'bali', 'phuket', 'maldives', 'pondicherry', 'puducherry', 'havelock', 'sydney', 'beach', 'coastal', 'island', 'hawaii'];
-  if (coastalKeywords.some(kw => normName.includes(kw)) || normCategory === 'coastal') {
+  if (coastalKeywords.some(kw => normName.includes(kw) || normCountry.includes(kw)) || normCategory === 'coastal') {
     return CLIMATE_PROFILES.COASTAL;
   }
 
   // Monsoon & Rainforest matches
   const monsoonKeywords = ['meghalaya', 'cherrapunji', 'shillong', 'kerala', 'munnar', 'alleppey', 'coorg', 'wayanad', 'ooty', 'rainforest', 'assam'];
-  if (monsoonKeywords.some(kw => normName.includes(kw))) {
+  if (monsoonKeywords.some(kw => normName.includes(kw) || normCountry.includes(kw))) {
     return CLIMATE_PROFILES.MONSOON;
   }
 
   // Desert / Arid Heritage matches
   const desertKeywords = ['jaipur', 'jaisalmer', 'udaipur', 'rajasthan', 'cairo', 'egypt', 'dubai', 'uae', 'desert', 'doha', 'abu dhabi'];
-  if (desertKeywords.some(kw => normName.includes(kw))) {
+  if (desertKeywords.some(kw => normName.includes(kw) || normCountry.includes(kw))) {
     return CLIMATE_PROFILES.DESERT;
   }
 
   // Spiritual / Temple matches
   const spiritualKeywords = ['varanasi', 'banaras', 'kashi', 'amritsar', 'rishikesh', 'haridwar', 'hampi', 'madurai', 'tirupati', 'bodh gaya', 'spiritual'];
-  if (spiritualKeywords.some(kw => normName.includes(kw)) || normCategory === 'spiritual') {
+  if (spiritualKeywords.some(kw => normName.includes(kw) || normCountry.includes(kw)) || normCategory === 'spiritual') {
     return CLIMATE_PROFILES.SPIRITUAL;
   }
 

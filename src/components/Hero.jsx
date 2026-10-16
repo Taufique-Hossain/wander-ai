@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  Search, Sparkles, MapPin, Compass, ArrowRight, ShieldCheck, 
-  Zap, CalendarDays, X, ChevronRight, Landmark, Building2, Flame 
+  Search, Sparkles, Compass, ArrowRight, ShieldCheck, 
+  Zap, CalendarDays, X, ChevronRight, Landmark, Building2 
 } from 'lucide-react';
 import { getSearchSuggestions } from '../services/autocompleteService';
 
@@ -23,10 +23,11 @@ export default function Hero({ onSearch, onSelectPopular, selectedDays = 3, onDa
     { value: 7, label: '7 Days' }
   ];
 
-  // Update suggestions whenever query changes
-  useEffect(() => {
-    if (query.trim().length >= 1) {
-      const results = getSearchSuggestions(query.trim(), 7);
+  // Handle user input and update search suggestions
+  const handleQueryChange = (val) => {
+    setQuery(val);
+    if (val.trim().length >= 1) {
+      const results = getSearchSuggestions(val.trim(), 7);
       setSuggestions(results);
       setIsOpenSuggestions(results.length > 0);
       setSelectedIndex(-1);
@@ -35,7 +36,7 @@ export default function Hero({ onSearch, onSelectPopular, selectedDays = 3, onDa
       setIsOpenSuggestions(false);
       setSelectedIndex(-1);
     }
-  }, [query]);
+  };
 
   // Handle click outside to close dropdown
   useEffect(() => {
@@ -182,7 +183,7 @@ export default function Hero({ onSearch, onSelectPopular, selectedDays = 3, onDa
                   ref={inputRef}
                   type="text"
                   value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  onChange={(e) => handleQueryChange(e.target.value)}
                   onFocus={() => {
                     if (suggestions.length > 0) setIsOpenSuggestions(true);
                   }}

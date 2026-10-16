@@ -6,10 +6,7 @@ import AIGuideModal from './components/AIGuideModal';
 import WishlistDrawer from './components/WishlistDrawer';
 import { initialDestinations } from './data/destinations';
 import { generateAITravelGuide } from './services/aiService';
-import { 
-  Compass, Sparkles, Filter, Layers, Globe, Shield, 
-  MapPin, CheckCircle2, ArrowRight 
-} from 'lucide-react';
+import { Compass, CheckCircle2 } from 'lucide-react';
 
 export default function App() {
   const [destinations] = useState(initialDestinations);

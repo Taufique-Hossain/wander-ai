@@ -23,8 +23,6 @@ export function formatPriceString(priceStr, currency = 'USD') {
   if (!priceStr) return '';
   if (priceStr.toLowerCase().includes('free')) return 'Free';
 
-  const config = CURRENCY_CONFIG[currency] || CURRENCY_CONFIG.USD;
-
   let formatted = priceStr;
 
   if (currency === 'INR') {

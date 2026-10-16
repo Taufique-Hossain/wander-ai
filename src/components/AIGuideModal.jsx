@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
-  X, Sparkles, Clock, MapPin, DollarSign, ShieldAlert, CheckCircle, 
-  Copy, Check, Share2, Compass, Calendar, ChevronRight, Zap, CalendarDays,
+  X, Sparkles, Clock, MapPin, CheckCircle, 
+  Copy, Check, Compass, Zap,
   Backpack, CheckSquare, Square, CloudSun, AlertTriangle, Info
 } from 'lucide-react';
 import { formatCurrency, formatPriceString } from '../utils/currency';
@@ -35,11 +35,14 @@ export default function AIGuideModal({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Reset selected day and packing state when guide updates
-  useEffect(() => {
+  // Reset selected day and packing state when guide updates (React recommended prop sync)
+  const [prevGuideKey, setPrevGuideKey] = useState('');
+  const currentGuideKey = `${guide?.destination || ''}_${guide?.daysCount || 1}`;
+  if (currentGuideKey !== prevGuideKey) {
+    setPrevGuideKey(currentGuideKey);
     setSelectedDayNumber(1);
     setPackedMap({});
-  }, [guide?.destination, guide?.daysCount]);
+  }
 
   const daysCount = guide?.daysCount || guide?.itineraryDays?.length || 1;
   const daySpendFormatted = formatCurrency(guide?.dailyBudgetUSD || 95, currency);
@@ -50,22 +53,27 @@ export default function AIGuideModal({
   const activeDayData = currentDaysList.find(d => d.dayNumber === selectedDayNumber) || currentDaysList[0];
 
   // Destination-tailored packing data
+  const destName = guide?.destination;
+  const destCountry = guide?.country;
+  const destCategory = guide?.category;
+
   const packingData = useMemo(() => {
-    if (!guide?.destination) return null;
-    return getTailoredPackingData(guide.destination, guide.country, daysCount, guide.category);
-  }, [guide?.destination, guide?.country, daysCount, guide?.category]);
+    if (!destName) return null;
+    return getTailoredPackingData(destName, destCountry, daysCount, destCategory);
+  }, [destName, destCountry, daysCount, destCategory]);
 
   // Packing stats
-  const itemsList = packingData?.items || [];
-  const packedCount = itemsList.filter(item => packedMap[item.id]).length;
-  const totalItems = itemsList.length;
+  const itemsList = packingData?.items;
+  const packedCount = (itemsList || []).filter(item => packedMap[item.id]).length;
+  const totalItems = itemsList ? itemsList.length : 0;
   const packPercent = totalItems > 0 ? Math.round((packedCount / totalItems) * 100) : 0;
 
   // Filtered packing items
   const filteredPackingItems = useMemo(() => {
-    if (packingCategoryFilter === 'all') return itemsList;
-    if (packingCategoryFilter === 'essential') return itemsList.filter(i => i.essential);
-    return itemsList.filter(i => i.category.toLowerCase() === packingCategoryFilter.toLowerCase());
+    const list = itemsList || [];
+    if (packingCategoryFilter === 'all') return list;
+    if (packingCategoryFilter === 'essential') return list.filter(i => i.essential);
+    return list.filter(i => i.category.toLowerCase() === packingCategoryFilter.toLowerCase());
   }, [itemsList, packingCategoryFilter]);
 
   if (!isOpen) return null;

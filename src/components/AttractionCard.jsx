@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, MapPin, Calendar, DollarSign, Sparkles, Heart, Check } from 'lucide-react';
+import { Star, MapPin, Calendar, Sparkles, Heart } from 'lucide-react';
 import { formatCurrency, formatPriceString } from '../utils/currency';
 
 export default function AttractionCard({ 

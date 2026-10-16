@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Trash2, MapPin, Sparkles, ExternalLink, ArrowRight } from 'lucide-react';
+import { X, Trash2, MapPin, Sparkles } from 'lucide-react';
 
 export default function WishlistDrawer({ 
   isOpen, 

@@ -89,7 +89,7 @@ export function buildSearchIndex() {
   }
 
   // 3. Top attractions / landmarks
-  for (const [key, d] of Object.entries(EXPERT_DESTINATIONS)) {
+  for (const d of Object.values(EXPERT_DESTINATIONS)) {
     if (d.topAttractions) {
       for (const a of d.topAttractions) {
         index.push({
