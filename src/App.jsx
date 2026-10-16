@@ -150,7 +150,7 @@ export default function App() {
 
           <div className="relative flex flex-col items-center select-none">
             {/* Spinning Brand Compass */}
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-cyan-400 p-0.5 shadow-2xl shadow-emerald-500/30 mb-4 animate-pop-in">
+            <div className="w-16 h-16 rounded-2xl bg-linear-to-tr from-emerald-500 via-teal-500 to-cyan-400 p-0.5 shadow-2xl shadow-emerald-500/30 mb-4 animate-pop-in">
               <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
                 <Compass className="w-8 h-8 text-emerald-400 animate-spin-once" />
               </div>
@@ -172,7 +172,7 @@ export default function App() {
 
             {/* Minimal Progress Bar */}
             <div className="w-44 h-1 bg-slate-800/80 rounded-full overflow-hidden p-0">
-              <div className="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 rounded-full animate-splash-progress" />
+              <div className="h-full bg-linear-to-r from-emerald-500 via-teal-400 to-cyan-400 rounded-full animate-splash-progress" />
             </div>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function App() {
         </div>
 
         {/* Architecture & Feature Highlights */}
-        <div className="mt-12 sm:mt-20 p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-slate-50 to-emerald-50/40 dark:from-slate-900 dark:via-slate-900/60 dark:to-slate-950 border border-slate-200 dark:border-slate-800 relative overflow-hidden shadow-sm dark:shadow-none transition-all duration-300 hover:border-slate-300 dark:hover:border-slate-700">
+        <div className="mt-12 sm:mt-20 p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-linear-to-br from-white via-slate-50 to-emerald-50/40 dark:from-slate-900 dark:via-slate-900/60 dark:to-slate-950 border border-slate-200 dark:border-slate-800 relative overflow-hidden shadow-sm dark:shadow-none transition-all duration-300 hover:border-slate-300 dark:hover:border-slate-700">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 blur-[100px] pointer-events-none rounded-full" />
 
           <div className="max-w-3xl">
@@ -268,7 +268,7 @@ export default function App() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs">
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md dark:hover:shadow-lg dark:hover:shadow-emerald-950/20">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:hover:shadow-lg dark:hover:shadow-emerald-950/20">
                 <p className="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                   <span>Curated Travel Engine</span>
@@ -276,7 +276,7 @@ export default function App() {
                 <p className="text-slate-600 dark:text-slate-400 text-[11px]">Structured travel synthesis covering 40+ destinations with genuine entry fees and schedules.</p>
               </div>
 
-              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md dark:hover:shadow-lg dark:hover:shadow-emerald-950/20">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-white/90 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:hover:shadow-lg dark:hover:shadow-emerald-950/20">
                 <p className="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                   <span>Zero-Break Caching</span>
